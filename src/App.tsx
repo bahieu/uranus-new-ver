@@ -17,7 +17,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      <Button color="palevioletred">click me!!</Button>
+      <Button>click me!!</Button>
       <PageFooter />
     </Router>
   );
