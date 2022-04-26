@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Button = styled.button`
   background: black;
@@ -7,12 +7,14 @@ const Button = styled.button`
   padding: 20px;
   margin: 10px;
   font-size: 16px;
+  cursor: pointer;
   :disabled {
     opacity: 0.4;
   }
   :hover {
     box-shadow: 0 0 10px yellow;
-    background: ${(primary: any) => (primary ? 'green' : 'black')};
+    background: ${(props: any) => (props.primary ? 'blue' : 'black')};
   }
 `;
+
 export default Button;
