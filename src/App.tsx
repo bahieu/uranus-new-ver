@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import News from './Pages/News';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
-import Button from './component/button';
+import Button, { PrimaryBtn, SecondaryBtn } from './component/button';
 
 function App() {
   return (
@@ -18,6 +18,8 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <Button>click me!!</Button>
+      <PrimaryBtn>Primary Button!</PrimaryBtn>
+      <SecondaryBtn>Secondary Button!</SecondaryBtn>
       <PageFooter />
     </Router>
   );

@@ -33,8 +33,8 @@ const PageFooter = () => {
           <SocialList />
         </MobileSocialList>
         <Policy>
-          <PolicyRow>© 2012</PolicyRow>
-          <PolicyRow>Policy Here</PolicyRow>
+          <PolicyRow>©2022</PolicyRow>
+          <PolicyRow>Policy</PolicyRow>
         </Policy>
       </BottomBar>
     </Footer>
