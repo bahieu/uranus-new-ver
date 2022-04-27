@@ -13,7 +13,22 @@ const Button = styled.button`
   }
   :hover {
     box-shadow: 0 0 10px yellow;
-    background: ${(props: any) => (props.primary ? 'blue' : 'black')};
+    background: red;
+  }
+`;
+
+export const PrimaryBtn = styled(Button)`
+  background: blue;
+  :hover {
+    box-shadow: 0 0 10px red;
+    background: green;
+  }
+`;
+export const SecondaryBtn = styled(Button)`
+  background: Gray;
+  :hover {
+    box-shadow: 0 0 10px red;
+    background: orange;
   }
 `;
 

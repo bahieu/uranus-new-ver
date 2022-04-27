@@ -1,11 +1,12 @@
 {
   "root": true,
-  "extends": ["airbnb-typescript", "plugin:prettier/recommended"],
+  "extends": ["airbnb", "airbnb-typescript", "plugin:prettier/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "tsconfigRootDir": ["__dirname", "./tsconfig.eslint.json"],
-    "sourceType": "module",
-    // "project": ["./tsconfig.eslint.json"],
+    "project": "./tsconfig.eslint.json",
+    // "tsconfigRootDir": "__dirname",
+    // "sourceType": "module",
+
     "ecmaVersion": 6,
     "ecmaFeatures": {
       "jsx": true
@@ -15,5 +16,6 @@
     "browser": true,
     "node": true
   },
+  "plugins": ["@typescript-eslint"],
   "rules": {}
 }
