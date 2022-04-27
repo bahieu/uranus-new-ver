@@ -12,7 +12,7 @@ const Button = styled.button`
   }
   :hover {
     box-shadow: 0 0 10px yellow;
-    background: ${(primary: any) => (primary ? 'green' : 'black')};
+    background: ${primary => (primary ? 'blue' : 'black')};
   }
 `;
 export default Button;

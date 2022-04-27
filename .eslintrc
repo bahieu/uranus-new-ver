@@ -15,5 +15,8 @@
     "browser": true,
     "node": true
   },
-  "rules": {}
+  "rules": {
+    "dot-notation": "off",
+    "@typescript-eslint/dot-notation": ["error"]
+  }
 }
