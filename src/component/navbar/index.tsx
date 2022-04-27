@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { NavbarTop, NavbarLink, NavbarItem } from '../../styles/Navbar';
 
 function Navbar() {

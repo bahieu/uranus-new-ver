@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './component/navbar';
 import PageFooter from './component/footer';
@@ -17,7 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      <Button>click me!!</Button>
+      <Button>click me !!</Button>
       <PrimaryBtn>Primary Button!</PrimaryBtn>
       <SecondaryBtn>Secondary Button!</SecondaryBtn>
       <PageFooter />

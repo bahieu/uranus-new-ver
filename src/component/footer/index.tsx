@@ -1,10 +1,8 @@
+import React from 'react';
+
 import {
   Footer,
   TopBar,
-  GetTheApp,
-  GetTheAppTitle,
-  AppStoreApp,
-  GoogleApp,
   DesktopSocialList,
   HR,
   BottomBar,
@@ -12,17 +10,13 @@ import {
   Policy,
   PolicyRow,
 } from '../../styles/Footer';
+
 import SocialList from './SocialList';
 
 const PageFooter = () => {
   return (
     <Footer>
       <TopBar>
-        <GetTheApp>
-          <GetTheAppTitle> Get The App</GetTheAppTitle>
-          <AppStoreApp />
-          <GoogleApp />
-        </GetTheApp>
         <DesktopSocialList>
           <SocialList />
         </DesktopSocialList>
