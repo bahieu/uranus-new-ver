@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Menu } from '@styled-icons/entypo';
 
 export const NavbarTop = styled.nav`
   background-color: #333;
@@ -19,7 +20,15 @@ export const NavbarItem = styled.div`
   }
 `;
 
-export const MenuIcon = styled.div``;
+export const MenuIcon = styled(Menu)`
+  display: none;
+  @media screen and (max-width: 600px) {
+    display: flex;
+    margin-left: 0;
+    width: 50px;
+    height: 50px;
+  }
+`;
 
 export const NavbarLink = styled(Link)`
   color: white;

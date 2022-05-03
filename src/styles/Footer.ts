@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-
+import TwitterIcon from '../assets/imgs/png/Twitter-logo.svg.png';
+import FacebookIcon from '../assets/imgs/png/Facebook-Logo-Square-768x768.png';
+import InstagramIcon from '../assets/imgs/png/900px-Instagram_icon.png';
 export const Footer = styled.footer`
   font-family: arial;
   text-align: center;
@@ -91,25 +93,31 @@ export const MobileSocialList = styled.div`
   } ;
 `;
 
-export const Twitter = styled.svg`
-  border: 1px lightgray solid;
-  width: 33px;
-  height: 33px;
+export const Twitter = styled.img`
+  background: url(${TwitterIcon}) no-repeat center;
+  border: none;
+  width: 35px;
+  height: 35px;
   margin-left: 5px;
+  cursor: pointer;
 `;
 
-export const Facebook = styled.svg`
-  border: 1px lightgray solid;
-  width: 33px;
-  height: 33px;
+export const Facebook = styled.img`
+  background: url(${FacebookIcon}) no-repeat center;
+  border: none;
+  width: 35px;
+  height: 35px;
   margin-left: 5px;
+  cursor: pointer;
 `;
 
-export const Instagram = styled.svg`
-  border: 1px lightgray solid;
-  width: 33px;
-  height: 33px;
+export const Instagram = styled.img`
+  background: url(${InstagramIcon}) no-repeat center;
+  border: none;
+  width: 35px;
+  height: 35px;
   margin-left: 5px;
+  cursor: pointer;
 `;
 
 export const HR = styled.div`
