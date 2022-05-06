@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import TwitterIcon from '../assets/imgs/png/Twitter-logo.svg.png';
 import FacebookIcon from '../assets/imgs/png/Facebook-Logo-Square-768x768.png';
 import InstagramIcon from '../assets/imgs/png/900px-Instagram_icon.png';
+import { Link } from 'react-router-dom';
+
 export const Footer = styled.footer`
   font-family: arial;
   text-align: center;
+  background-color: #f5f5f5;
 
   @media (min-width: 870px) {
     text-align: left;
@@ -19,59 +22,6 @@ export const TopBar = styled.div`
   @media (min-width: 870px) {
     padding: 45px 80px;
     display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-  }
-`;
-
-export const GetTheApp = styled.div`
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 1.11;
-  color: #2b2738;
-  margin: 0 -15px;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-
-  @media (min-width: 870px) {
-    flex-wrap: nowrap;
-    align-items: center;
-    white-space: nowrap;
-  }
-`;
-
-export const GetTheAppTitle = styled.div`
-  margin-bottom: 4px;
-  width: 100%;
-
-  @media (min-width: 870px) {
-    width: unset;
-    margin: 0 15px;
-  }
-`;
-
-export const AppStoreApp = styled.img`
-  width: 189px;
-  height: 63px;
-  margin: 16px auto;
-  padding: 0 20px;
-
-  @media (min-width: 870px) {
-    padding: 0;
-    margin: 0 8px;
-  }
-`;
-
-export const GoogleApp = styled.img`
-  width: 189px;
-  height: 63px;
-  margin: 16px auto;
-  padding: 0 20px;
-
-  @media (min-width: 870px) {
-    padding: 0;
-    margin: 0 8px;
   }
 `;
 
@@ -81,6 +31,7 @@ export const DesktopSocialList = styled.div`
   @media (min-width: 870px) {
     display: flex;
     align-items: center;
+    margin-bottom: 16px;
   } ;
 `;
 
@@ -135,13 +86,10 @@ export const HR = styled.div`
 export const BottomBar = styled.div`
   max-width: 1280px;
   margin: auto;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
+  display: block;
   justify-content: center;
 
   @media (min-width: 870px) {
-    flex-wrap: nowrap;
     padding: 40px 80px 60px;
     justify-content: space-between;
   } ;
@@ -166,7 +114,7 @@ export const MenuHead = styled.div`
   color: #2b2738;
 `;
 
-export const MenuLink = styled.a`
+export const MenuLink = styled(Link)`
   display: block;
   text-decoration: none;
   font-size: 16px;

@@ -7,6 +7,9 @@ import Home from './Pages/Home';
 import News from './Pages/News';
 import Contact from './Pages/Contact';
 import About from './Pages/About';
+import AboutUs from './Pages/AboutUs';
+import TermPolicy from './Pages/TermPolicy';
+import Community from './Pages/Community';
 import Button, { PrimaryBtn, SecondaryBtn } from './component/button';
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/term-policy" element={<TermPolicy />} />
+        <Route path="/community" element={<Community />} />
       </Routes>
       <Button>click me !!</Button>
       <PrimaryBtn>Primary Button!</PrimaryBtn>
