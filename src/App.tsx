@@ -10,6 +10,8 @@ import About from './Pages/About';
 import AboutUs from './Pages/AboutUs';
 import TermPolicy from './Pages/TermPolicy';
 import Community from './Pages/Community';
+import HelpPage from './Pages/HelpPage';
+import Support from './Pages/Support';
 import Button, { PrimaryBtn, SecondaryBtn } from './component/button';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/term-policy" element={<TermPolicy />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/support" element={<Support />} />
       </Routes>
       <Button>click me !!</Button>
       <PrimaryBtn>Primary Button!</PrimaryBtn>

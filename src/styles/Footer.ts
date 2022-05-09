@@ -3,13 +3,14 @@ import TwitterIcon from '../assets/imgs/png/Twitter-logo.svg.png';
 import FacebookIcon from '../assets/imgs/png/Facebook-Logo-Square-768x768.png';
 import InstagramIcon from '../assets/imgs/png/900px-Instagram_icon.png';
 import { Link } from 'react-router-dom';
+import { device } from '../constant/devices';
 
 export const Footer = styled.footer`
   font-family: arial;
   text-align: center;
   background-color: #f5f5f5;
 
-  @media (min-width: 870px) {
+  @media ${device.pc} {
     text-align: left;
   }
 `;
@@ -19,7 +20,7 @@ export const TopBar = styled.div`
   max-width: 1280px;
   padding: 40px 0;
 
-  @media (min-width: 870px) {
+  @media ${device.pc} {
     padding: 45px 80px;
     display: flex;
   }
@@ -28,7 +29,7 @@ export const TopBar = styled.div`
 export const DesktopSocialList = styled.div`
   display: none;
 
-  @media (min-width: 870px) {
+  @media ${device.pc} {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
@@ -39,32 +40,30 @@ export const MobileSocialList = styled.div`
   padding-bottom: 40px;
   width: 100%;
 
-  @media (min-width: 870px) {
+  @media ${device.pc} {
     display: none;
   } ;
 `;
 
-export const Twitter = styled.img`
+export const Twitter = styled.div`
   background: url(${TwitterIcon}) no-repeat center;
-  border: none;
   width: 35px;
   height: 35px;
   margin-left: 5px;
   cursor: pointer;
 `;
 
-export const Facebook = styled.img`
+export const Facebook = styled.div`
   background: url(${FacebookIcon}) no-repeat center;
-  border: none;
   width: 35px;
   height: 35px;
   margin-left: 5px;
   cursor: pointer;
 `;
 
-export const Instagram = styled.img`
+export const Instagram = styled.div`
   background: url(${InstagramIcon}) no-repeat center;
-  border: none;
+  border-style: 0;
   width: 35px;
   height: 35px;
   margin-left: 5px;
@@ -74,7 +73,7 @@ export const Instagram = styled.img`
 export const HR = styled.div`
   display: none;
 
-  @media (min-width: 870px) {
+  @media ${device.pc} {
     height: 0;
     padding: 0;
     margin: 0;
@@ -89,7 +88,7 @@ export const BottomBar = styled.div`
   display: block;
   justify-content: center;
 
-  @media (min-width: 870px) {
+  @media ${device.pc} {
     padding: 40px 80px 60px;
     justify-content: space-between;
   } ;
@@ -99,7 +98,7 @@ export const Menu = styled.div`
   margin-bottom: 30px;
   min-width: 50%;
 
-  @media (min-width: 870px) {
+  @media ${device.pc} {
     min-width: unset;
     margin-bottom: 0;
     margin-right: 40px;
@@ -122,7 +121,7 @@ export const MenuLink = styled(Link)`
   line-height: 2;
   color: #2f6cb3;
 
-  @media (min-width: 870px) {
+  @media ${device.pc} {
     white-space: nowrap;
   }
 `;
