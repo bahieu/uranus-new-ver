@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import { Menu } from '@styled-icons/entypo';
 import { device } from '../constant/devices';
 
-export const NavbarTop = styled.nav`
-  background-color: #333;
+export const NavbarTop = styled.div`
+  font-family: 'Poppins', sans-serif;
   overflow: hidden;
 `;
 
 export const NavbarItem = styled.div`
   float: left;
-  color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -48,9 +47,7 @@ export const MenuIcon = styled(Menu)`
 `;
 
 export const NavbarLink = styled(Link)`
-  color: white;
-  font-size: x-large;
-  font-family: Helvetica;
+  font-size: 14px;
   text-decoration: none;
   margin: 10px;
   &:hover {

@@ -4,15 +4,10 @@ import Navbar from './component/navbar';
 import PageFooter from './component/footer';
 import { MenuIcon } from './styles/Navbar';
 import Home from './Pages/Home';
-import News from './Pages/News';
+import Pricing from './Pages/Pricing';
 import Contact from './Pages/Contact';
-import About from './Pages/About';
-import AboutUs from './Pages/AboutUs';
-import TermPolicy from './Pages/TermPolicy';
-import Community from './Pages/Community';
-import HelpPage from './Pages/HelpPage';
-import Support from './Pages/Support';
-import Button, { PrimaryBtn, SecondaryBtn } from './component/button';
+import Business from './Pages/Business';
+import Jobs from './Pages/Jobs';
 
 function App() {
   return (
@@ -21,18 +16,11 @@ function App() {
       <MenuIcon />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/news" element={<News />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/business" element={<Business />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/term-policy" element={<TermPolicy />} />
-        <Route path="/community" element={<Community />} />
-        <Route path="/help" element={<HelpPage />} />
-        <Route path="/support" element={<Support />} />
+        <Route path="/jobs" element={<Jobs />} />
       </Routes>
-      <Button>click me !!</Button>
-      <PrimaryBtn>Primary Button!</PrimaryBtn>
-      <SecondaryBtn>Secondary Button!</SecondaryBtn>
       <PageFooter />
     </Router>
   );

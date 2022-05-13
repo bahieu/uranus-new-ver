@@ -1,6 +1,7 @@
 import React from 'react';
+import { Title } from '../styles/Title';
 
-const Home = () => {
-  return <h1>HOME PAGE</h1>;
+export const Work = () => {
+  return <Title>WORK PAGE</Title>;
 };
-export default Home;
+export default Work;

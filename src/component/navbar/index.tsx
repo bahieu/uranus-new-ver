@@ -6,10 +6,11 @@ function Navbar() {
   return (
     <NavbarTop>
       <NavbarItem>
-        <NavbarLink to="/">Home</NavbarLink>
-        <NavbarLink to="/news">News</NavbarLink>
+        <NavbarLink to="/">Work</NavbarLink>
+        <NavbarLink to="/pricing">Pricing</NavbarLink>
+        <NavbarLink to="/business">Business</NavbarLink>
         <NavbarLink to="/contact">Contact</NavbarLink>
-        <NavbarLink to="/about">About</NavbarLink>
+        <NavbarLink to="/jobs">Jobs.</NavbarLink>
       </NavbarItem>
     </NavbarTop>
   );

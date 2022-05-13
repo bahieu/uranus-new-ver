@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import TwitterIcon from '../assets/imgs/png/Twitter-logo.svg.png';
-import FacebookIcon from '../assets/imgs/png/Facebook-Logo-Square-768x768.png';
-import InstagramIcon from '../assets/imgs/png/900px-Instagram_icon.png';
+import TwitterIcon from '../assets/imgs/png/Twitter-logo.png';
+import FacebookIcon from '../assets/imgs/png/Facebook-Logo.png';
+import InstagramIcon from '../assets/imgs/png/Instagram_icon.png';
 import { Link } from 'react-router-dom';
 import { device } from '../constant/devices';
 
 export const Footer = styled.footer`
-  font-family: arial;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   background-color: #f5f5f5;
 
@@ -55,6 +55,7 @@ export const Twitter = styled.div`
 
 export const Facebook = styled.div`
   background: url(${FacebookIcon}) no-repeat center;
+  border-radius: 50%;
   width: 35px;
   height: 35px;
   margin-left: 5px;
@@ -63,6 +64,7 @@ export const Facebook = styled.div`
 
 export const Instagram = styled.div`
   background: url(${InstagramIcon}) no-repeat center;
+  border-radius: 30%;
   border-style: 0;
   width: 35px;
   height: 35px;

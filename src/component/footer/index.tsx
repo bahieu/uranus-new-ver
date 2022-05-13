@@ -2,12 +2,7 @@ import React from 'react';
 
 import {
   Footer,
-  TopBar,
   DesktopSocialList,
-  HR,
-  Menu,
-  MenuHead,
-  MenuLink,
   BottomBar,
   MobileSocialList,
   Policy,
@@ -15,24 +10,10 @@ import {
 } from '../../styles/Footer';
 
 import SocialList from './SocialList';
-import { menu } from './menuFooter';
 
 const PageFooter = () => {
   return (
     <Footer>
-      <TopBar>
-        {menu.map(({ name, links }) => (
-          <Menu key={name}>
-            <MenuHead>{name}</MenuHead>
-            {links.map(({ title, url }) => (
-              <MenuLink to={url} key={title}>
-                {title}
-              </MenuLink>
-            ))}
-          </Menu>
-        ))}
-      </TopBar>
-      <HR />
       <BottomBar>
         <DesktopSocialList>
           <SocialList />
@@ -41,7 +22,6 @@ const PageFooter = () => {
           <SocialList />
         </MobileSocialList>
         <Policy>
-          <PolicyRow>Policy</PolicyRow>
           <PolicyRow>©2022</PolicyRow>
         </Policy>
       </BottomBar>

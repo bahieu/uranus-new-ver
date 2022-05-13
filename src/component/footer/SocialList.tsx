@@ -5,8 +5,8 @@ import { Twitter, Facebook, Instagram } from '../../styles/Footer';
 const SocialList = () => {
   return (
     <>
-      <Twitter />
       <Facebook />
+      <Twitter />
       <Instagram />
     </>
   );
