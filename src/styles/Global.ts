@@ -5,14 +5,12 @@ export const GlobalStyles = createGlobalStyle`
  
 ${reset}
  * {
-     margin: 0 auto;    
-     color: #000000;
-    } 
-    
-    body {    
+} 
+
+body {    
     max-width:1440px;
-    font-family: 'Poppins', sans-serif; 
-    background-color: #F5F5F7;  
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;     
 }
 `;
 

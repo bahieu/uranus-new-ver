@@ -1,18 +1,27 @@
 import React from 'react';
 
-import { NavbarTop, NavbarLink, NavbarItem } from '../../styles/Navbar';
+import {
+  NavbarContainer,
+  NavbarTop,
+  NavbarLink,
+  NavbarItem,
+  Logo,
+} from '../../styles/Navbar';
 
 function Navbar() {
   return (
-    <NavbarTop>
-      <NavbarItem>
-        <NavbarLink to="/">Work</NavbarLink>
-        <NavbarLink to="/pricing">Pricing</NavbarLink>
-        <NavbarLink to="/business">Business</NavbarLink>
-        <NavbarLink to="/contact">Contact</NavbarLink>
-        <NavbarLink to="/jobs">Jobs.</NavbarLink>
-      </NavbarItem>
-    </NavbarTop>
+    <NavbarContainer>
+      <NavbarTop>
+        <Logo />
+        <NavbarItem>
+          <NavbarLink to="/">Work</NavbarLink>
+          <NavbarLink to="/pricing">Pricing</NavbarLink>
+          <NavbarLink to="/business">Business</NavbarLink>
+          <NavbarLink to="/contact">Contact</NavbarLink>
+          <NavbarLink to="/jobs">Jobs.</NavbarLink>
+        </NavbarItem>
+      </NavbarTop>
+    </NavbarContainer>
   );
 }
 export default Navbar;

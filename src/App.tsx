@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './component/navbar';
-import PageFooter from './component/footer';
+import Footer from './component/footer';
 import { MenuIcon } from './styles/Navbar';
 import Home from './Pages/Home';
 import Pricing from './Pages/Pricing';
@@ -21,7 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/jobs" element={<Jobs />} />
       </Routes>
-      <PageFooter />
+      <Footer />
     </Router>
   );
 }
