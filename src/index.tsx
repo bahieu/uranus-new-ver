@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import FontStyle from './styles/FontStyles';
-import GlobalStyles from './styles/Global';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import App from './App';
+import Application from './component/Application';
+import Index from './Pages/Home';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <FontStyle />
-    <App />
+    <Application>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+        </Routes>
+      </BrowserRouter>
+    </Application>
   </React.StrictMode>,
 );
