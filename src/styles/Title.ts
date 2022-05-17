@@ -1,13 +1,35 @@
 import styled from 'styled-components';
 
-interface props {
+type StyleTitle = {
+  fontWeight?: string;
+  fontSize?: string;
+  lineHeight?: string;
   color?: string;
-}
-export const Title = styled.h1<props>`
+  marginTop?: string;
+  marginBottom?: string;
+};
+interface StyleDescription extends StyleTitle {}
+
+export const Title = styled.h1<StyleTitle>`
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 81px;
-  color: ${props => (props.color ? props.color : '#00000')};
+  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 600)};
+  font-size: ${({ fontSize }) => (fontSize ? fontSize : '34px')};
+  line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : '34px')};
+  color: ${({ theme, color }) => (!color ? theme.text : color)};
+  margin-bottom: ${({ marginBottom }) =>
+    marginBottom ? marginBottom : '0.67em'};
+  margin-top: ${({ marginTop }) => (marginTop ? marginTop : '0.67em')};
+`;
+
+export const Description = styled.p<StyleDescription>`
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 600)};
+  font-size: ${({ fontSize }) => (fontSize ? fontSize : '34px')};
+  line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : '34px')};
+  color: ${({ theme, color }) => (!color ? theme.text : color)};
+  margin-bottom: ${({ marginBottom }) =>
+    marginBottom ? marginBottom : '0.67em'};
+  margin-top: ${({ marginTop }) => (marginTop ? marginTop : '0.67em')};
 `;
