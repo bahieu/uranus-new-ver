@@ -4,6 +4,7 @@ import MainLayout from 'src/component/Layout';
 import Carousel from './Carousel';
 import Welcome from './Welcome';
 import OutVision from './OurVision';
+import Designer from './Designers';
 
 export const HomePage: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ export const HomePage: React.FC = () => {
       <Carousel />
       <Welcome />
       <OutVision />
+      <Designer />
     </MainLayout>
   );
 };
