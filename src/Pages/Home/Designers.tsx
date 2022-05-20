@@ -45,11 +45,10 @@ const Designer: React.FC = () => {
               </div>
             );
           })}
-          ;
         </DsnerList>
         <Container>
-          <Row>
-            <Col xs={4}>
+          <Row className="d-flex justify-content-between">
+            <Col xs={2}>
               <Title lineHeight="38px" fontSize="25px">
                 Designer
               </Title>
@@ -58,7 +57,7 @@ const Designer: React.FC = () => {
                 social impact.
               </Description>
             </Col>
-            <Col xs={4}>
+            <Col xs={2}>
               <Title lineHeight="38px" fontSize="25px">
                 Designer
               </Title>
@@ -67,7 +66,7 @@ const Designer: React.FC = () => {
                 social impact.
               </Description>
             </Col>
-            <Col xs={4}>
+            <Col xs={2}>
               <Title lineHeight="38px" fontSize="25px">
                 Designer
               </Title>
