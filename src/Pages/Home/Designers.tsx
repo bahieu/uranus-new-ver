@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Col, Container, Row } from 'react-bootstrap';
 
 import dsner01 from 'src/assets/imgs/dsner/dsner01.png';
 import dsner02 from 'src/assets/imgs/dsner/dsner02.png';
 import dsner03 from 'src/assets/imgs/dsner/dsner03.png';
-import { Col, Container, Row } from 'react-bootstrap';
 import { Description, Title } from 'src/styles/Title';
 
 const Wrapper = styled.div`
@@ -12,7 +12,6 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-// List designer
 const DsnerList = styled.div`
   display: grid;
   width: 100%;
@@ -48,7 +47,7 @@ const Designer: React.FC = () => {
           })}
         </DsnerList>
         <Container>
-          <Row className="d-flex justify-content-between">
+          <Row className="justify-content-between">
             <Col xs={2}>
               <Title lineHeight="38px" fontSize="25px">
                 Designer
