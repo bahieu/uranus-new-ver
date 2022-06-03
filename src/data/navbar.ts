@@ -4,9 +4,9 @@ type Navbar = {
 };
 
 export const navbar: Navbar[] = [
-  { href: '/', navItem: 'Work' },
+  { href: '/', navItem: 'Our Work' },
   { href: '/', navItem: 'Pricing' },
   { href: '/', navItem: 'Business' },
   { href: '/', navItem: 'Contact' },
-  { href: '/', navItem: 'Job' },
+  { href: '/', navItem: 'Jobs.' },
 ];

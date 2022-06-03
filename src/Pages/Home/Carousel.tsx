@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import bg from 'src/assets/imgs/header/bacground.png';
 import arrow from 'src/assets/imgs/header/Vector 1.png';
 import { Title, Description } from 'src/styles/Title';
 import { Container } from 'react-bootstrap';
@@ -10,7 +9,6 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   top: 0;
-  background: url(${bg}) center no-repeat;
   background-size: 100% 100%;
   background-position: top center;
 `;
