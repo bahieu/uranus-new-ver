@@ -12,7 +12,7 @@ const Wrapper = styled.header`
   background-color: transparent;
   padding-top: 50px;
   transition: color 0.3s linear;
-  position: absolute;
+  position: relative;
   z-index: 2;
   width: 100%;
   .header-brand {
@@ -83,7 +83,12 @@ const Header: React.FC = () => {
                 );
               })}
             </ul>
-            <Button color="#fff" backgroundColor="#00A3FF" padding="16px 54px">
+            <Button
+              color="#fff"
+              backgroundColor="#00A3FF"
+              padding="16px 54px"
+              border="none"
+            >
               Contact us
             </Button>
           </Col>

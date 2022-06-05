@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 type BtnProps = {
   color: string;
-  backgroundColor: string;
+  backgroundColor?: string;
   borderColor?: string;
-  border?: string;
+  border: string;
   padding?: string;
 };
 
