@@ -4,7 +4,7 @@ type BtnProps = {
   color: string;
   backgroundColor?: string;
   borderColor?: string;
-  border: string;
+  border?: string;
   padding?: string;
 };
 
