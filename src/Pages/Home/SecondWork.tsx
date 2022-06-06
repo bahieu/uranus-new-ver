@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     padding-bottom: 60px;
   }
   .col-padding {
-    padding-left: 18%;
+    padding-right: 0;
   }
   .mb-50 {
     margin-bottom: 50px;
@@ -116,10 +116,10 @@ const SecondWork: React.FC = () => {
       </Container>
       <BottomWork>
         <Row className="mb-50 m-0 flex-nowrap">
-          <Col lg={8} className="p-0 mb-5">
+          <Col xs={8} className="p-0 mb-5">
             <ImgPicture src={w204} />
           </Col>
-          <Col className="ml-20">
+          <Col className="ml-20 p-0">
             <Title lineHeight="24px" fontSize="25px" marginTop="0">
               Latest {'&'} greatest.
             </Title>
@@ -147,7 +147,7 @@ const SecondWork: React.FC = () => {
               way money moves.
             </Description>
           </Col>
-          <Col lg={8} className="p-0">
+          <Col xs={8} className="p-0">
             <ImgPicture src={w205} />
           </Col>
         </Row>
