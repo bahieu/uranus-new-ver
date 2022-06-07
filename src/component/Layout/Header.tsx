@@ -26,6 +26,10 @@ const Wrapper = styled.header`
     justify-content: space-around;
     align-items: center;
   }
+  .first-nav-link {
+    color: #bd00ff;
+    text-decoration-line: underline;
+  }
 `;
 
 const ImgIcon = styled.img`
@@ -43,14 +47,10 @@ const BrandContent = styled.div`
 const StyleLink = styled(Link)`
   color: ${({ theme }) => theme.text};
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   line-height: 21px;
   padding-left: 50px;
-  .first-nav-link {
-    color: #bd00ff;
-    text-decoration-line: underline;
-  }
 `;
 
 const Header: React.FC = () => {

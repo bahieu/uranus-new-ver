@@ -20,13 +20,13 @@ const Wrapper = styled.div`
     padding-bottom: 60px;
   }
   .col-padding {
-    padding-right: 0;
+    padding-right: 30px;
   }
   .mb-50 {
     margin-bottom: 50px;
   }
-  .ml-20 {
-    margin-left: 20px;
+  .ml-40 {
+    margin-left: 40px;
   }
   .des-width {
     width: 272px;
@@ -65,6 +65,11 @@ const BottomWork = styled.div`
   position: relative;
   width: 100%;
   padding-top: 150px;
+`;
+const ContentBody = styled.div`
+  position: relative;
+  padding-right: 20px;
+  left: 55%;
 `;
 
 const SecondWork: React.FC = () => {
@@ -119,7 +124,7 @@ const SecondWork: React.FC = () => {
           <Col xs={8} className="p-0 mb-5">
             <ImgPicture src={w204} />
           </Col>
-          <Col className="ml-20 p-0">
+          <Col className="ml-40 p-0">
             <Title lineHeight="24px" fontSize="25px" marginTop="0">
               Latest {'&'} greatest.
             </Title>
@@ -135,17 +140,19 @@ const SecondWork: React.FC = () => {
         </Row>
         <Row className="m-0 flex-nowrap">
           <Col className="col-padding">
-            <Title lineHeight="24px" fontSize="25px" marginTop="0">
-              Latest {'&'} greatest.
-            </Title>
-            <Description
-              fontSize="14px"
-              lineHeight="24px"
-              className="des-width"
-            >
-              Creating a next-generation money-transfer service to transform the
-              way money moves.
-            </Description>
+            <ContentBody>
+              <Title lineHeight="24px" fontSize="25px" marginTop="0">
+                Latest {'&'} greatest.
+              </Title>
+              <Description
+                fontSize="14px"
+                lineHeight="24px"
+                className="des-width"
+              >
+                Creating a next-generation money-transfer service to transform
+                the way money moves.
+              </Description>
+            </ContentBody>
           </Col>
           <Col xs={8} className="p-0">
             <ImgPicture src={w205} />
