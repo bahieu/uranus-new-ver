@@ -10,6 +10,7 @@ import w301 from 'src/assets/imgs/work03/w301.png';
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  margin-bottom: 80px;
 `;
 
 const ThirdWorkTitle = styled.div`
@@ -68,9 +69,14 @@ const ThirdWork: React.FC = () => {
                 <Title fontSize="16px" lineHeight="16px">
                   {v.name}
                 </Title>
-                {/* <Rectangle width="auto" height="2px" bgColor="#C5CFF3" /> */}
               </Col>
             ))}
+            <Col>
+              <Rectangle width="auto" height="2px" bgColor="#C5CFF3" />
+            </Col>
+            <Col>
+              <Rectangle width="auto" height="2px" bgColor="#C5CFF3" />
+            </Col>
           </Row>
         </BrandList>
       </Container>
