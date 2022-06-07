@@ -10,12 +10,6 @@ import w301 from 'src/assets/imgs/work03/w301.png';
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  .bt-content {
-    position: absolute;
-    background-color: #000000;
-    opacity: 0.5;
-    z-index: 1;
-  }
 `;
 
 const ThirdWorkTitle = styled.div`
@@ -26,12 +20,34 @@ const BrandList = styled.div`
   margin-bottom: 50px;
 `;
 
-const ImgPicture = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+const BottomThirdWork = styled.div`
+  position: relative;
+  width: 84%;
+  height: 517px;
+  left: 16%;
+  background: url(${w301}) center no-repeat;
+  background-size: cover;
+  background-position: top center;
 `;
-
+const BottomThirdWorkContent = styled.div`
+  position: absolute;
+  width: 406px;
+  height: 517px;
+  background: rgba(0, 0, 0, 0.5);
+`;
+const ContentTitle = styled.div`
+  margin-top: 170px;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+`;
+const ContentBody = styled.div`
+  width: 414px;
+  margin-left: 10%;
+  .title {
+    width: 200px;
+  }
+`;
 const ThirdWork: React.FC = () => {
   return (
     <Wrapper>
@@ -52,22 +68,40 @@ const ThirdWork: React.FC = () => {
                 <Title fontSize="16px" lineHeight="16px">
                   {v.name}
                 </Title>
-                <Rectangle width="auto" height="2px" bgColor="#C5CFF3" />
+                {/* <Rectangle width="auto" height="2px" bgColor="#C5CFF3" /> */}
               </Col>
             ))}
           </Row>
         </BrandList>
-        <Row className="m-0 bt-work">
-          <Col className="bt-content">
-            <Title lineHeight="24px" fontSize="24px">
+      </Container>
+      <BottomThirdWork>
+        <BottomThirdWorkContent>
+          <ContentTitle>
+            <Title lineHeight="18px" fontSize="18px" color="#fff">
+              Work
+            </Title>
+            <Rectangle
+              bgColor="#00A3FF"
+              width="216px"
+              height="2px"
+              marginLeft="20px"
+            />
+          </ContentTitle>
+          <ContentBody>
+            <Title
+              lineHeight="48px"
+              fontSize="49px"
+              className="title"
+              color="#fff"
+            >
               Be one of us..
             </Title>
-          </Col>
-          <Col xs={12} className="p-0">
-            <ImgPicture src={w301} />
-          </Col>
-        </Row>
-      </Container>
+            <Description lineHeight="24px" fontSize="14px" color="#fff">
+              Bringing the world to the Tokyo Olympics.
+            </Description>
+          </ContentBody>
+        </BottomThirdWorkContent>
+      </BottomThirdWork>
     </Wrapper>
   );
 };
