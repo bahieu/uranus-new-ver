@@ -25,7 +25,7 @@ export const Title = styled.h1<StyleTitle>`
 export const Description = styled.p<StyleDescription>`
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 600)};
+  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 400)};
   font-size: ${({ fontSize }) => (fontSize ? fontSize : '34px')};
   line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : '34px')};
   color: ${({ theme, color }) => (!color ? theme.desTextColor : color)};
