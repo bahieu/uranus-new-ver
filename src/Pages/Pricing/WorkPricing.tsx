@@ -24,7 +24,7 @@ const Wrapper = styled.div`
     margin-bottom: 14%;
   }
   .left__content {
-    padding-right: 16%;
+    padding-right: 8%;
   }
 `;
 const FourWork = styled.div`
@@ -55,7 +55,7 @@ const WorkPricing: React.FC = () => {
       <FourWork>
         <Container className="body__content">
           <Row>
-            <Col className="left__content">
+            <Col xs={6} className="left__content">
               <HeadPricing>
                 <Title lineHeight="18px" fontSize="18px">
                   Work
