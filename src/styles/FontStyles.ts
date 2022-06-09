@@ -13,6 +13,7 @@ const FontStyle = createGlobalStyle`
     @font-face {
         font-family:'Poppins', sans-serif;
         src: url('../assets/fonts/Poppins-SemiBold.ttf');
+        font-weight: 700;
     }
 `;
 

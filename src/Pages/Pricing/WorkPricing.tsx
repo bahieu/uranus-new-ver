@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   background-color: #f9f9f9;
   top: 0;
   background: url(${bg}) center no-repeat;
-  background-size: 100%;
+  background-size: 100% 45%;
   background-position: top center;
   .img__size {
     padding-right: 4%;

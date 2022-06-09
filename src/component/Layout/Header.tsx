@@ -26,10 +26,6 @@ const Wrapper = styled.header`
     justify-content: space-around;
     align-items: center;
   }
-  /* .first-nav-link {
-    color: #bd00ff;
-    text-decoration-line: underline;
-  } */
 `;
 
 const ImgIcon = styled.img`
@@ -52,7 +48,7 @@ const StyleLink = styled(Link)`
   line-height: 21px;
   padding-left: 50px;
   :hover {
-    color: #bd00ff;
+    color: #00a3ff;
     text-decoration-line: underline;
   }
 `;
