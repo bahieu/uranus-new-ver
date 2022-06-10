@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 
 import { Col, Container, Row } from 'react-bootstrap';
 import icon from 'src/assets/imgs/header/LogoIcon.png';
+import navIcon from 'src/assets/imgs/header/NavIcon.png';
 import { navbar } from '../../data/navbar';
 import { Description, Title } from 'src/styles/Title';
 import Button from '../button';
+import breakpoint from 'src/constant/devices';
 
 const Wrapper = styled.header`
   background-color: transparent;
@@ -26,14 +28,28 @@ const Wrapper = styled.header`
     justify-content: space-around;
     align-items: center;
   }
+  .nav__mobile {
+    justify-content: center !important;
+  }
 `;
 
 const ImgIcon = styled.img`
   width: 50px;
   height: 50px;
   cursor: pointer;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    display: block;
+  }
 `;
-
+const NavIcon = styled.img`
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: none;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    display: block;
+  }
+`;
 const BrandContent = styled.div`
   top: -30px;
   width: 155px;
@@ -51,14 +67,19 @@ const StyleLink = styled(Link)`
     color: #00a3ff;
     text-decoration-line: underline;
   }
+
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    display: none;
+  }
 `;
 
 const Header: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <Row className="justify-content-lg-between  align-baseline ">
+        <Row className="justify-content-lg-between  align-baseline flex-nowrap nav__mobile ">
           <Col lg={4} className="header-brand">
+            <NavIcon src={navIcon} />
             <ImgIcon src={icon} />
             <BrandContent>
               <Title lineHeight="19px" fontSize="22px" className="mb-0">
