@@ -72,14 +72,14 @@ const FirstWork: React.FC = () => {
               marginLeft="20px"
             />
           </HeadWorkContent>
-          <Title lineHeight="48px" fontSize="49px">
+          <Title lineHeight="48px" fontSize="49px" fontWeight="700">
             Make huge moves.
           </Title>
           <Description lineHeight="24px" fontSize="14px" marginBottom="50px">
             Creating a next-generation money-transfer service to transform the
             way money moves.
           </Description>
-          <Button color="#BD00FF" borderColor="#BD00FF" border="solid">
+          <Button color="#00A3FF" borderColor="#00A3FF" border="solid">
             Contact us
           </Button>
           <BottonWorkContent>

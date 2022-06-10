@@ -9,7 +9,7 @@ type Theme = {
 const lightTheme: Theme = {
   backgroundColor: '#E5E5E5',
   text: '#000000',
-  desTextColor: '#6E6E73',
+  desTextColor: '#5E688B',
   borderColor: '#2D5BFF',
   backgroundColorWebSmall: '#D6E3F1',
 };

@@ -26,10 +26,6 @@ const Wrapper = styled.header`
     justify-content: space-around;
     align-items: center;
   }
-  .first-nav-link {
-    color: #bd00ff;
-    text-decoration-line: underline;
-  }
 `;
 
 const ImgIcon = styled.img`
@@ -51,6 +47,10 @@ const StyleLink = styled(Link)`
   font-size: 14px;
   line-height: 21px;
   padding-left: 50px;
+  :hover {
+    color: #00a3ff;
+    text-decoration-line: underline;
+  }
 `;
 
 const Header: React.FC = () => {
