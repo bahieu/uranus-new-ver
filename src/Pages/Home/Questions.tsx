@@ -23,8 +23,8 @@ const HeaderQuestion = styled.div`
 `;
 const BodyQuestion = styled.div``;
 const ImgArrow = styled.img`
-  width: 11;
-  height: 7;
+  width: 11px;
+  height: 7px;
   object-fit: contain;
 `;
 const Shapes = styled.div`

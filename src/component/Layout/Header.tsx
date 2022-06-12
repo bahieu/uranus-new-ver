@@ -28,8 +28,10 @@ const Wrapper = styled.header`
     justify-content: space-around;
     align-items: center;
   }
-  .nav__mobile {
-    justify-content: center !important;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    .nav__mobile {
+      justify-content: center !important;
+    }
   }
 `;
 
@@ -63,7 +65,7 @@ const StyleLink = styled(Link)`
   font-size: 14px;
   line-height: 21px;
   padding-left: 50px;
-  :hover {
+  &:hover {
     color: #00a3ff;
     text-decoration-line: underline;
   }

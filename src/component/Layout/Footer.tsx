@@ -9,7 +9,7 @@ import fbLogo from 'src/assets/imgs/footer/facebook.png';
 import InsLogo from 'src/assets/imgs/footer/instagram.png';
 import TwitterLogo from 'src/assets/imgs/footer/twitter.png';
 
-const Wrapper = styled.div`
+const Wrapper = styled.footer`
   position: relative;
   background-color: #fafafa;
   width: 90%;
@@ -88,6 +88,7 @@ const BrandContent = styled.div`
 
 const Footer = () => {
   const socialImgList: any[] = [fbLogo, TwitterLogo, InsLogo];
+
   return (
     <Wrapper>
       <ContactUS>
