@@ -29,8 +29,8 @@ const Wrapper = styled.header`
     & [data-bs-target] {
       background-color: #d9d9d9;
       border-radius: 50%;
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       &.active {
         background-color: #00a3ff;
       }
@@ -72,7 +72,7 @@ const FirstWork: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <Carousel interval={3000} nextLabel={null} prevLabel={null}>
+        <Carousel interval={3000} controls={false}>
           <Carousel.Item>
             <Slide>
               <PictureList>

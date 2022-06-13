@@ -17,7 +17,7 @@ export const Button = styled.button<BtnProps>`
   padding: ${({ padding }) => (padding ? padding : '16px 26px')};
 
   border-radius: 7px;
-  :hover {
+  &:hover {
     opacity: 0.7;
   }
 `;

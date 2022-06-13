@@ -48,6 +48,10 @@ const ImgSocial = styled.img`
   height: 100%;
   margin-right: 26px;
   object-fit: cover;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 `;
 
 const FooterBottom = styled.div`
