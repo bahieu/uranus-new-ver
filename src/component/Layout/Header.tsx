@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { Col, Container, Row } from 'react-bootstrap';
-import icon from 'src/assets/imgs/header/LogoIcon.png';
+import logoIcon from 'src/assets/imgs/header/LogoIcon.png';
 import navIcon from 'src/assets/imgs/header/NavIcon.png';
 import { navbar } from '../../data/navbar';
 import { Description, Title } from 'src/styles/Title';
@@ -26,6 +26,9 @@ const Wrapper = styled.header`
     align-items: center;
     width: 240px;
     @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+      position: relative;
+      left: 7%;
+      transform: translateX(-10%);
       width: 270px;
       padding: 0;
       justify-content: space-around;
@@ -36,6 +39,12 @@ const Wrapper = styled.header`
     padding: 0;
     justify-content: space-around;
     align-items: center;
+
+    @media ${breakpoint.tablet} {
+      position: absolute;
+      right: 1%;
+      top: 45%;
+    }
     .nav_items {
       display: flex;
       flex-wrap: nowrap;
@@ -74,10 +83,6 @@ const Wrapper = styled.header`
       border: 2px solid #00a3ff;
       color: #00a3ff;
       border-radius: 90px;
-    }
-    .nav__mobile {
-      margin-left: 4%;
-      justify-content: space-around;
     }
   }
 `;
@@ -126,9 +131,9 @@ const Header: React.FC = () => {
     <Wrapper>
       <Container>
         <Row className="justify-content-between flex-nowrap nav__mobile nav__pc ">
-          <Col md={4} lg={2} className="header-brand">
+          <Col lg={2} className="header-brand">
             <NavIcon src={navIcon} />
-            <ImgIcon src={icon} />
+            <ImgIcon src={logoIcon} />
             <BrandContent>
               <Title lineHeight="19px" fontSize="22px" className="mb-0">
                 Uranus.
@@ -138,7 +143,7 @@ const Header: React.FC = () => {
               </Description>
             </BrandContent>
           </Col>
-          <Col md={4} lg={8} className="header-menu">
+          <Col lg={9} className="header-menu">
             <ul className="text-end nav_items">
               {navbar.map((v, i) => {
                 return (
