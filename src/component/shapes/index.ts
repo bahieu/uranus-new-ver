@@ -6,6 +6,7 @@ type ShapeProps = {
   height: string;
   marginRight?: string;
   marginLeft?: string;
+  active?: boolean;
 };
 
 export const Rectangle = styled.div<ShapeProps>`

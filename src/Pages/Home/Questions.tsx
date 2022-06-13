@@ -21,10 +21,17 @@ const HeaderQuestion = styled.div`
   text-align: center;
   width: 30%;
 `;
-const BodyQuestion = styled.div``;
+const BodyQuestion = styled.div`
+  .title__question {
+    cursor: pointer;
+    &:hover {
+      color: #00a3ff;
+    }
+  }
+`;
 const ImgArrow = styled.img`
-  width: 11;
-  height: 7;
+  width: 11px;
+  height: 7px;
   object-fit: contain;
 `;
 const Shapes = styled.div`
@@ -41,7 +48,7 @@ const Question: React.FC = () => {
           </Title>
         </HeaderQuestion>
         <BodyQuestion>
-          <Title fontSize="16px" lineHeight="24px" color="#00A3FF">
+          <Title fontSize="16px" lineHeight="24px" className="title__question">
             Title Question 1
           </Title>
           <Shapes>
@@ -57,7 +64,12 @@ const Question: React.FC = () => {
             Treasury (Include: 20% operation, 30% for liquidity and 50%
             cashBack)
           </Description>
-          <Title fontSize="16px" lineHeight="24px" marginTop="40px">
+          <Title
+            fontSize="16px"
+            lineHeight="24px"
+            marginTop="40px"
+            className="title__question"
+          >
             Title Question 2
           </Title>
           <Shapes>
@@ -68,8 +80,13 @@ const Question: React.FC = () => {
               marginRight="8px"
             />
           </Shapes>
-          <Title fontSize="16px" lineHeight="24px" marginTop="40px">
-            Title Question 2
+          <Title
+            fontSize="16px"
+            lineHeight="24px"
+            marginTop="40px"
+            className="title__question"
+          >
+            Title Question 3
           </Title>
           <Shapes>
             <Rectangle
