@@ -36,9 +36,14 @@ const Wrapper = styled.header`
         background-color: #00a3ff;
       }
     }
-    @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    @media ${breakpoint.tablet} {
       left: 50%;
       bottom: -45%;
+      transform: translateX(-10%);
+    }
+    @media ${breakpoint.mobile} {
+      left: 50%;
+      bottom: -70%;
       transform: translateX(-10%);
     }
   }
@@ -77,15 +82,28 @@ const WorkContent = styled.div`
   width: 351px;
   top: 37%;
   @media ${breakpoint.tablet} {
-    text-align: center;
     position: relative;
     bottom: -30%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: translateX(40px);
     .carousel__btn {
       background-color: #00a3ff;
       color: #fff;
       border-radius: 10px;
+      transform: translateX(-10px);
+    }
+  }
+  @media ${breakpoint.mobile} {
+    position: relative;
+    bottom: 10%;
+    left: 0;
+    margin-top: 20px;
+    transform: translateX(40px);
+    .carousel__btn {
+      background-color: #00a3ff;
+      color: #fff;
+      border-radius: 10px;
+      transform: translateX(-10px);
     }
   }
 `;
@@ -93,12 +111,10 @@ const WorkContent = styled.div`
 const HeadWorkContent = styled.div`
   display: flex;
   align-items: center;
-`;
-const BodyContent = styled.div`
   @media ${breakpoint.tablet} {
-    text-align: center;
   }
 `;
+const BodyContent = styled.div``;
 const Slide = styled.div``;
 const FirstWork: React.FC = () => {
   const imgList: any[] = [work01, work02, work03];
