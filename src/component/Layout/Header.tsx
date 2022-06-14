@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { Col, Container, Row } from 'react-bootstrap';
-import icon from 'src/assets/imgs/header/LogoIcon.png';
+import logoIcon from 'src/assets/imgs/header/LogoIcon.png';
 import navIcon from 'src/assets/imgs/header/NavIcon.png';
 import { navbar } from '../../data/navbar';
 import { Description, Title } from 'src/styles/Title';
@@ -17,20 +17,72 @@ const Wrapper = styled.header`
   position: relative;
   z-index: 2;
   width: 100%;
+  .nav__pc {
+    margin: 0;
+  }
   .header-brand {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 240px;
+    @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+      position: relative;
+      left: 7%;
+      transform: translateX(-10%);
+      width: 270px;
+      padding: 0;
+      justify-content: space-around;
+    }
   }
   .header-menu {
     display: flex;
+    padding: 0;
     justify-content: space-around;
     align-items: center;
+
+    @media ${breakpoint.tablet} {
+      position: absolute;
+      right: 1%;
+      top: 45%;
+    }
+    .nav_items {
+      display: flex;
+      flex-wrap: nowrap;
+
+      @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+        display: none;
+      }
+    }
+  }
+  .header__btn {
+    align-self: center;
+    text-align: center;
+    padding-left: 0;
+    @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+      margin: 0;
+      padding: 0;
+      text-align: right;
+    }
   }
   @media ${breakpoint.mobile}, ${breakpoint.tablet} {
-    .nav__mobile {
-      justify-content: center !important;
+    padding-top: 20px;
+    .container {
+      margin: 0 30px 0 0;
+      padding: 0;
+      max-width: 100%;
+    }
+    .col-lg-8 {
+      padding: 0;
+      /* justify-content: flex-start; */
+      /* width: 50%; */
+    }
+    .mobile__header__btn {
+      padding: 10px 12px;
+      margin-right: 20px;
+      background-color: #fff;
+      border: 2px solid #00a3ff;
+      color: #00a3ff;
+      border-radius: 90px;
     }
   }
 `;
@@ -57,6 +109,9 @@ const BrandContent = styled.div`
   width: 155px;
   height: auto;
   vertical-align: top;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    padding: 0;
+  }
 `;
 const StyleLink = styled(Link)`
   color: ${({ theme }) => theme.text};
@@ -69,20 +124,16 @@ const StyleLink = styled(Link)`
     color: #00a3ff;
     text-decoration-line: underline;
   }
-
-  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
-    display: none;
-  }
 `;
 
 const Header: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <Row className="justify-content-lg-between  align-baseline flex-nowrap nav__mobile ">
-          <Col lg={4} className="header-brand">
+        <Row className="justify-content-between flex-nowrap nav__mobile nav__pc ">
+          <Col lg={2} className="header-brand">
             <NavIcon src={navIcon} />
-            <ImgIcon src={icon} />
+            <ImgIcon src={logoIcon} />
             <BrandContent>
               <Title lineHeight="19px" fontSize="22px" className="mb-0">
                 Uranus.
@@ -92,15 +143,11 @@ const Header: React.FC = () => {
               </Description>
             </BrandContent>
           </Col>
-          <Col lg={8} className="header-menu">
-            <ul className="text-end">
+          <Col lg={9} className="header-menu">
+            <ul className="text-end nav_items">
               {navbar.map((v, i) => {
                 return (
-                  <StyleLink
-                    to={v.href}
-                    key={i}
-                    className={i === 0 ? 'first-nav-link' : undefined}
-                  >
+                  <StyleLink to={v.href} key={i}>
                     {v.navItem}
                   </StyleLink>
                 );
@@ -109,8 +156,9 @@ const Header: React.FC = () => {
             <Button
               color="#fff"
               backgroundColor="#00A3FF"
-              padding="16px 54px"
+              padding="16px 48px"
               border="none"
+              className="mobile__header__btn"
             >
               Contact us
             </Button>

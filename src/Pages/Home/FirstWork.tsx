@@ -8,6 +8,7 @@ import work03 from 'src/assets/imgs/work01/w03.png';
 import { Description, Title } from 'src/styles/Title';
 import Button from 'src/component/button';
 import { Rectangle } from 'src/component/shapes';
+import breakpoint from 'src/constant/devices';
 
 const Wrapper = styled.header`
   position: relative;
@@ -35,6 +36,17 @@ const Wrapper = styled.header`
         background-color: #00a3ff;
       }
     }
+    @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+      left: 50%;
+      bottom: -45%;
+      transform: translateX(-10%);
+    }
+  }
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    .container {
+      max-width: 1022px;
+      padding: 0;
+    }
   }
 `;
 
@@ -49,6 +61,10 @@ const PictureList = styled.div`
     grid-row-start: span 2;
     grid-row-end: 2;
   }
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    padding: 0;
+    gap: 0;
+  }
 `;
 
 const ImgPicture = styled.img`
@@ -60,10 +76,28 @@ const WorkContent = styled.div`
   position: absolute;
   width: 351px;
   top: 37%;
+  @media ${breakpoint.tablet} {
+    text-align: center;
+    position: relative;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    .carousel__btn {
+      background-color: #00a3ff;
+      color: #fff;
+      border-radius: 10px;
+    }
+  }
 `;
+
 const HeadWorkContent = styled.div`
   display: flex;
   align-items: center;
+`;
+const BodyContent = styled.div`
+  @media ${breakpoint.tablet} {
+    text-align: center;
+  }
 `;
 const Slide = styled.div``;
 const FirstWork: React.FC = () => {
@@ -82,33 +116,6 @@ const FirstWork: React.FC = () => {
                   </div>
                 ))}
               </PictureList>
-              <WorkContent>
-                <HeadWorkContent>
-                  <Title lineHeight="18px" fontSize="18px">
-                    Work
-                  </Title>
-                  <Rectangle
-                    bgColor="#00A3FF"
-                    width="216px"
-                    height="2px"
-                    marginLeft="20px"
-                  />
-                </HeadWorkContent>
-                <Title lineHeight="48px" fontSize="49px" fontWeight="700">
-                  Make huge moves.
-                </Title>
-                <Description
-                  lineHeight="24px"
-                  fontSize="14px"
-                  marginBottom="50px"
-                >
-                  Creating a next-generation money-transfer service to transform
-                  the way money moves.
-                </Description>
-                <Button color="#00A3FF" borderColor="#00A3FF" border="solid">
-                  Contact us
-                </Button>
-              </WorkContent>
             </Slide>
           </Carousel.Item>
           <Carousel.Item>
@@ -120,33 +127,6 @@ const FirstWork: React.FC = () => {
                   </div>
                 ))}
               </PictureList>
-              <WorkContent>
-                <HeadWorkContent>
-                  <Title lineHeight="18px" fontSize="18px">
-                    Work
-                  </Title>
-                  <Rectangle
-                    bgColor="#00A3FF"
-                    width="216px"
-                    height="2px"
-                    marginLeft="20px"
-                  />
-                </HeadWorkContent>
-                <Title lineHeight="48px" fontSize="49px" fontWeight="700">
-                  Make huge moves.
-                </Title>
-                <Description
-                  lineHeight="24px"
-                  fontSize="14px"
-                  marginBottom="50px"
-                >
-                  Creating a next-generation money-transfer service to transform
-                  the way money moves.
-                </Description>
-                <Button color="#00A3FF" borderColor="#00A3FF" border="solid">
-                  Contact us
-                </Button>
-              </WorkContent>
             </Slide>
           </Carousel.Item>
           <Carousel.Item>
@@ -158,36 +138,39 @@ const FirstWork: React.FC = () => {
                   </div>
                 ))}
               </PictureList>
-              <WorkContent>
-                <HeadWorkContent>
-                  <Title lineHeight="18px" fontSize="18px">
-                    Work
-                  </Title>
-                  <Rectangle
-                    bgColor="#00A3FF"
-                    width="216px"
-                    height="2px"
-                    marginLeft="20px"
-                  />
-                </HeadWorkContent>
-                <Title lineHeight="48px" fontSize="49px" fontWeight="700">
-                  Make huge moves.
-                </Title>
-                <Description
-                  lineHeight="24px"
-                  fontSize="14px"
-                  marginBottom="50px"
-                >
-                  Creating a next-generation money-transfer service to transform
-                  the way money moves.
-                </Description>
-                <Button color="#00A3FF" borderColor="#00A3FF" border="solid">
-                  Contact us
-                </Button>
-              </WorkContent>
             </Slide>
           </Carousel.Item>
         </Carousel>
+        <WorkContent>
+          <HeadWorkContent>
+            <Title lineHeight="18px" fontSize="18px">
+              Work
+            </Title>
+            <Rectangle
+              bgColor="#00A3FF"
+              width="216px"
+              height="2px"
+              marginLeft="20px"
+            />
+          </HeadWorkContent>
+          <BodyContent>
+            <Title lineHeight="48px" fontSize="49px" fontWeight="700">
+              Make huge moves.
+            </Title>
+            <Description lineHeight="24px" fontSize="14px" marginBottom="50px">
+              Creating a next-generation money-transfer service to transform the
+              way money moves.
+            </Description>
+          </BodyContent>
+          <Button
+            color="#00A3FF"
+            borderColor="#00A3FF"
+            border="solid"
+            className="carousel__btn"
+          >
+            Contact us
+          </Button>
+        </WorkContent>
       </Container>
     </Wrapper>
   );
