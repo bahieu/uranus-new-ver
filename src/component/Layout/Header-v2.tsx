@@ -5,14 +5,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 import logoIcon from 'src/assets/imgs/header/LogoIcon.png';
 import { navbar } from 'src/data/navbar';
-import navIcon from 'src/assets/imgs/header/NavIcon.png';
+import mobileNavIcon from 'src/assets/imgs/header/NavIcon.png';
 import timesIcon from 'src/assets/imgs/header/times.png';
 import breakpoint from 'src/constant/devices';
 import { Description, Title } from 'src/styles/Title';
 import Button from '../button';
 
 const Wrapper = styled.header`
-  background-color: transparent;
+  background-color: #fff;
   padding-top: 30px;
   position: relative;
   transition: color 0.3s linear;
@@ -24,12 +24,22 @@ const Wrapper = styled.header`
     justify-content: space-around;
     align-items: center;
   }
-  @media ${breakpoint.mobile} {
-    position: absolute;
-    .navIcon-mobile {
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    background-color: #f5f5f5;
+    .header-menu {
+      justify-content: flex-end;
+    }
+  }
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    .mobile__header__btn {
+      padding: 10px 12px;
+      margin-right: 20px;
+      background-color: #f5f5f5;
+      border: 2px solid #00a3ff;
+      color: #00a3ff;
+      border-radius: 90px;
       position: absolute;
-      left: 7%;
-      transform: translateX(-10%);
+      top: 25%;
     }
   }
 `;
@@ -38,9 +48,11 @@ const HeaderBrand = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 240px;
-  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
-    position: absolute;
-    left: 10%;
+  @media ${breakpoint.mobile} {
+    margin: -50px 0 15px 20px;
+  }
+  @media ${breakpoint.tablet} {
+    margin: -50px 0 15px 40px;
   }
 `;
 
@@ -63,20 +75,17 @@ const StyleLink = styled(Link)`
   }
 `;
 
-const NavbarIcon = styled.label`
+const MobileNavbarIcon = styled.label`
+  display: none;
   @media ${breakpoint.mobile}, ${breakpoint.tablet} {
-    position: absolute;
-    left: 7%;
+    display: block;
+    top: 50px;
+    margin-right: 30px;
     transform: translateX(-10%);
   }
 `;
-const NavbarImg = styled.img`
+const MobileNavbarImg = styled.img`
   @media ${breakpoint.mobile}, ${breakpoint.tablet} {
-    display: block;
-    position: absolute;
-    width: 24px;
-    height: 17px;
-    top: 50px;
     opacity: 1;
     width: 32px;
     height: 32px;
@@ -85,7 +94,6 @@ const NavbarImg = styled.img`
       opacity: 0.5;
     }
   }
-  display: none;
 `;
 const NavInput = styled.input.attrs({ type: 'checkbox' })`
   display: none;
@@ -169,9 +177,9 @@ const Header: React.FC = () => {
       <Container>
         <Row className="justify-content-lg-between align-baseline">
           <Col lg={2} className="p-0 ">
-            <NavbarIcon htmlFor="nav-mb-input">
-              <NavbarImg src={navIcon} />
-            </NavbarIcon>
+            <MobileNavbarIcon htmlFor="nav-mb-input">
+              <MobileNavbarImg src={mobileNavIcon} />
+            </MobileNavbarIcon>
             <HeaderBrand>
               <ImgIcon src={logoIcon} />
               <BrandContent>
