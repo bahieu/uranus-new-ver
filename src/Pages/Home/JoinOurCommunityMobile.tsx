@@ -20,18 +20,18 @@ const HeadCommunity = styled.div`
   text-align: center;
 `;
 
-const JoinOurCommunity: React.FC = () => {
+const JoinOurCommunityMobile: React.FC = () => {
   return (
-    <Wrapper className="d-none d-xl-block">
+    <Wrapper className="d-block d-xl-none">
       <Container className="content">
         <HeadCommunity>
-          <Title lineHeight="48px" fontSize="49px">
+          <Title lineHeight="27px" fontSize="28px" fontWeight="700">
             Yay! 🎉 <br /> Join our community
           </Title>
           <Description fontSize="14px" lineHeight="24px" marginBottom="40px">
             Follow the community and update the latest news from the project
           </Description>
-          <Button color="#00A3FF" border="solid 2px">
+          <Button color="#fff" backgroundColor="#00A3FF" border="solid 2px">
             Join our community
           </Button>
         </HeadCommunity>
@@ -40,4 +40,4 @@ const JoinOurCommunity: React.FC = () => {
   );
 };
 
-export default JoinOurCommunity;
+export default JoinOurCommunityMobile;
