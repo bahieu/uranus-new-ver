@@ -37,7 +37,7 @@ const ImgMember = styled.img`
 
 const WeTeam: React.FC = () => {
   return (
-    <Wrapper>
+    <Wrapper className="d-none d-xl-block">
       <Container>
         <Row>
           <Col className="text-center">
