@@ -40,7 +40,7 @@ const Shapes = styled.div`
 `;
 const Question: React.FC = () => {
   return (
-    <Wrapper>
+    <Wrapper className="d-none d-xl-block">
       <Container className="content">
         <HeaderQuestion>
           <Title fontSize="49px" lineHeight="48px">

@@ -36,22 +36,6 @@ const Wrapper = styled.div`
   .head__content {
     position: relative;
   }
-  @media ${breakpoint.tablet} {
-    .container {
-      margin: 0;
-      padding: 0;
-      max-width: 100%;
-    }
-    .head__content {
-      flex-wrap: nowrap;
-      margin-bottom: 30px;
-    }
-    .head__work_img {
-      max-width: 65%;
-    }
-    .body__content__Work {
-    }
-  }
 `;
 
 const WorkTitle = styled.div`
@@ -97,7 +81,7 @@ const WorkBodyContent = styled.div`
 
 const SecondWork: React.FC = () => {
   return (
-    <Wrapper>
+    <Wrapper className="d-none d-xl-block">
       <Container>
         <WorkTitle>
           <Rectangle
