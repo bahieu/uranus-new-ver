@@ -1,6 +1,7 @@
 import React from 'react';
 
 import MainLayout from 'src/component/Layout';
+import CarouselMobile from './CarouselMobile';
 
 import FirstWork from './FirstWork';
 import JoinOurCommunity from './JoinOurCommunity';
@@ -13,6 +14,7 @@ export const HomePage: React.FC = () => {
   return (
     <MainLayout>
       <FirstWork />
+      <CarouselMobile />
       <SecondWork />
       <WeTeam />
       <ThirdWork />

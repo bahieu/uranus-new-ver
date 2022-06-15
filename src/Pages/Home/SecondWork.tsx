@@ -18,7 +18,6 @@ const Wrapper = styled.div`
     padding-top: 60px;
   }
   .body__workImg {
-    display: flex;
     max-width: 100%;
     padding-bottom: 60px;
   }
