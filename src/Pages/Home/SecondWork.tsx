@@ -9,6 +9,7 @@ import w204 from 'src/assets/imgs/work02/w204.png';
 import w205 from 'src/assets/imgs/work02/w205.png';
 import { Title, Description } from 'src/styles/Title';
 import { Rectangle } from 'src/component/shapes';
+import breakpoint from 'src/constant/devices';
 
 const Wrapper = styled.div`
   position: relative;
@@ -16,7 +17,9 @@ const Wrapper = styled.div`
   .col-2-pad {
     padding-top: 60px;
   }
-  .col-1-pad {
+  .body__workImg {
+    display: flex;
+    max-width: 100%;
     padding-bottom: 60px;
   }
   .col-padding {
@@ -31,16 +34,27 @@ const Wrapper = styled.div`
   .des-width {
     width: 272px;
   }
+  .head__content {
+    position: relative;
+  }
+  @media ${breakpoint.tablet} {
+    .container {
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+    }
+    .head__content {
+      flex-wrap: nowrap;
+      margin-bottom: 30px;
+    }
+    .head__work_img {
+      max-width: 65%;
+    }
+    .body__content__Work {
+    }
+  }
 `;
 
-const HeaderWork = styled.div`
-  position: relative;
-  width: 100%;
-  padding-right: 3%;
-  margin-bottom: 20px;
-  display: grid;
-  gap: 10px;
-`;
 const WorkTitle = styled.div`
   display: flex;
   align-items: center;
@@ -54,11 +68,17 @@ const HeaderWorkContent = styled.div`
   bottom: 0;
   right: 0;
   padding-left: 16px;
+  @media ${breakpoint.tablet} {
+    position: relative;
+  }
 `;
-const ImgPicture = styled.img`
+const ImgWork = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+  @media ${breakpoint.tablet} {
+    object-fit: fill;
+  }
 `;
 
 const BottomWork = styled.div`
@@ -70,6 +90,10 @@ const ContentBody = styled.div`
   position: relative;
   padding-right: 20px;
   left: 55%;
+`;
+
+const WorkBodyContent = styled.div`
+  order: 1;
 `;
 
 const SecondWork: React.FC = () => {
@@ -87,29 +111,35 @@ const SecondWork: React.FC = () => {
             Work
           </Title>
         </WorkTitle>
-        <HeaderWork>
-          <ImgPicture src={w201} />
-          <HeaderWorkContent>
-            <Title lineHeight="48px" fontSize="49px" marginBottom="0">
-              Latest {'&'} greatest.
-            </Title>
-            <Description fontSize="14px" lineHeight="24px">
-              Bringing the world to the Tokyo Olympics.
-            </Description>
-          </HeaderWorkContent>
-        </HeaderWork>
-        <Row>
-          <Col className="col-1-pad">
-            <ImgPicture src={w202} />
-            <Title lineHeight="24px" fontSize="25px" marginTop="0">
-              Amplifying audio.
-            </Title>
-            <Description fontSize="14px" lineHeight="24px">
-              Bringing the world to the Tokyo Olympics.
-            </Description>
+        <Row className="head__content">
+          <Col lg={12} className="head__work_img">
+            <ImgWork src={w201} />
+          </Col>
+          <Col>
+            <HeaderWorkContent>
+              <Title lineHeight="48px" fontSize="49px" marginBottom="0">
+                Latest {'&'} greatest.
+              </Title>
+              <Description fontSize="14px" lineHeight="24px">
+                Bringing the world to the Tokyo Olympics.
+              </Description>
+            </HeaderWorkContent>
+          </Col>
+        </Row>
+        <Row className="body__content__Work">
+          <Col className="body__workImg">
+            <ImgWork src={w202} />
+            <WorkBodyContent>
+              <Title lineHeight="24px" fontSize="25px" marginTop="0">
+                Amplifying audio.
+              </Title>
+              <Description fontSize="14px" lineHeight="24px">
+                Bringing the world to the Tokyo Olympics.
+              </Description>
+            </WorkBodyContent>
           </Col>
           <Col className="col-2-pad">
-            <ImgPicture src={w203} />
+            <ImgWork src={w203} />
             <Title lineHeight="24px" fontSize="25px" marginTop="0">
               Above {'&'} beyond.
             </Title>
@@ -122,7 +152,7 @@ const SecondWork: React.FC = () => {
       <BottomWork>
         <Row className="mb-50 m-0 flex-nowrap">
           <Col xs={8} className="p-0 mb-5">
-            <ImgPicture src={w204} />
+            <ImgWork src={w204} />
           </Col>
           <Col className="ml-40 p-0">
             <Title lineHeight="24px" fontSize="25px" marginTop="0">
@@ -155,7 +185,7 @@ const SecondWork: React.FC = () => {
             </ContentBody>
           </Col>
           <Col xs={8} className="p-0">
-            <ImgPicture src={w205} />
+            <ImgWork src={w205} />
           </Col>
         </Row>
       </BottomWork>
