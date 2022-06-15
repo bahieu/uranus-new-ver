@@ -51,7 +51,7 @@ const ContentBody = styled.div`
 `;
 const ThirdWork: React.FC = () => {
   return (
-    <Wrapper>
+    <Wrapper className="d-none d-xl-block">
       <Container>
         <ThirdWorkTitle>
           <Title lineHeight="48px" fontSize="49px">

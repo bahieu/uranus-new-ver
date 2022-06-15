@@ -9,7 +9,7 @@ import Button from 'src/component/button';
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  margin: 35px 20px 70px 20px;
+  margin: 35px 0px 70px 0;
   .content {
     display: flex;
     align-items: center;
@@ -17,11 +17,18 @@ const Wrapper = styled.div`
     text-align: center;
     padding: 0;
   }
+  .row {
+    margin: 0;
+  }
+
   .member-des {
     max-width: 240px;
   }
 `;
-const HeadContent = styled.div``;
+const HeadContent = styled.div`
+  text-align: center;
+  margin-bottom: 30px;
+`;
 const Circle = styled.div`
   width: 85px;
   height: 85px;
@@ -39,37 +46,41 @@ const WeTeamMobile: React.FC = () => {
   return (
     <Wrapper className="d-block d-xl-none">
       <HeadContent>
-        <Title>We Team.</Title>
-        <Description>Bringing the world to the Tokyo Olympics.</Description>
+        <Title lineHeight="27px" fontSize="28px" fontWeight="700">
+          We Team.
+        </Title>
+        <Description lineHeight="24px" fontSize="14px">
+          Bringing the world to the Tokyo Olympics.
+        </Description>
       </HeadContent>
       {members.map((v, i) => (
-        <Row key={i}>
-          <Col xs={2}>
+        <Row key={i} className="flex-nowrap mb-4">
+          <Col xs={3}>
             <Circle>
               <ImgMember src={v.img} />
             </Circle>
           </Col>
-          <Col xs={10}>
+          <Col xs={9}>
             <Row className="flex-column">
-              <Col>
+              <Col xs={6}>
                 <Row>
-                  <Col xs={6}>
+                  <Col xs={9}>
                     <Title fontSize="16px" lineHeight="16px">
                       {v.title}
                     </Title>
                   </Col>
-                  <Col xs={6}>
+                  <Col xs={3} className="align-self-center">
                     <Button
                       color="#fff"
                       backgroundColor="#00A3FF"
-                      padding="6px 24px"
+                      padding="5px 20px"
                     >
                       {v.position}
                     </Button>
                   </Col>
                 </Row>
               </Col>
-              <Col>
+              <Col xs={9}>
                 <Description fontSize="14px" lineHeight="24px">
                   {v.description}
                 </Description>

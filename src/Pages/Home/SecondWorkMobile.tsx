@@ -12,6 +12,14 @@ const Wrapper = styled.div`
 
   .row {
     margin-top: 20px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .col-7 {
+    padding: 0;
+  }
+  .col-5 {
+    padding-right: 0;
   }
   .left__content {
     position: relative;
