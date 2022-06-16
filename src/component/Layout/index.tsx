@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from './Header-v2';
+import Header from './Header';
 import Footer from './Footer';
 
 type Main = {

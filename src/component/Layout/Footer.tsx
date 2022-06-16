@@ -8,6 +8,7 @@ import icon from 'src/assets/imgs/header/LogoIcon.png';
 import fbLogo from 'src/assets/imgs/footer/facebook.png';
 import InsLogo from 'src/assets/imgs/footer/instagram.png';
 import TwitterLogo from 'src/assets/imgs/footer/twitter.png';
+import breakpoint from 'src/constant/devices';
 
 const Wrapper = styled.footer`
   position: relative;
@@ -15,6 +16,10 @@ const Wrapper = styled.footer`
   width: 90%;
   left: 5%;
   padding: 30px 0;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    width: 100%;
+    left: 0;
+  }
 `;
 const ContactUS = styled.div`
   width: 100%;
@@ -29,11 +34,22 @@ const ContactUS = styled.div`
     margin-bottom: 54px;
     margin: 0;
   }
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    .contact-content {
+      margin-left: 0;
+    }
+  }
 `;
 
 const ContainerContact = styled.div`
   width: 40%;
   position: relative;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    text-align: center;
+  }
 `;
 
 const SocialList = styled.div`
@@ -42,6 +58,12 @@ const SocialList = styled.div`
   width: 20px;
   display: flex;
   margin-bottom: 100px;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    margin-bottom: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 const ImgSocial = styled.img`
   width: 100%;
@@ -58,8 +80,12 @@ const FooterBottom = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    display: none;
+  }
 `;
+
 const FooterLink = styled.a`
   color: #0d6efd;
   cursor: pointer;
@@ -68,6 +94,11 @@ const FooterLink = styled.a`
 const FooterBottomContent = styled.div`
   margin-left: 138px;
   padding-right: 119px;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    margin-bottom: 50px;
+    padding-right: 98px;
+    margin-left: 0;
+  }
 `;
 const ImgIcon = styled.img`
   width: 45px;
@@ -82,12 +113,40 @@ const Brand = styled.div`
   align-items: center;
   width: 240px;
   margin-left: 138px;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    position: relative;
+    justify-content: space-around;
+    margin-left: 0;
+  }
 `;
 const BrandContent = styled.div`
   top: -30px;
   width: 155px;
   height: auto;
   vertical-align: top;
+`;
+
+const MadeByMobile = styled.div`
+  display: none;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding-top: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background-color: #f1f1f1;
+  }
+`;
+const YearMobile = styled.div`
+  display: none;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    display: block;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+  }
 `;
 
 const Footer = () => {
@@ -112,9 +171,9 @@ const Footer = () => {
         </Brand>
 
         <ContainerContact>
-          <Row className="justify-content-between item-align">
+          <Row className="justify-content-between item-align   ">
             {contactUs.map((v, i) => (
-              <Col key={i} xs={5} className="item-align">
+              <Col key={i} xs={12} lg={6} className="item-align">
                 <Title fontSize="16px" lineHeight="24px">
                   {v.title}
                 </Title>
@@ -130,7 +189,6 @@ const Footer = () => {
           </Row>
         </ContainerContact>
       </ContactUS>
-
       <FooterBottomContent>
         <SocialList>
           {socialImgList.map((v, i) => (
@@ -149,6 +207,19 @@ const Footer = () => {
           </Description>
         </FooterBottom>
       </FooterBottomContent>
+      <YearMobile>
+        <Title fontSize="12px" lineHeight="18px">
+          <u>© 2022 Uranus</u>
+        </Title>
+      </YearMobile>
+      <MadeByMobile>
+        <Description fontSize="12px" lineHeight="18px">
+          Made with ☕ by{' '}
+          <FooterLink>
+            <u>Uranus</u>
+          </FooterLink>
+        </Description>
+      </MadeByMobile>
     </Wrapper>
   );
 };

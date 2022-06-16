@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const HeadCommunity = styled.div`
-  width: 500px;
+  width: 100%;
   text-align: center;
 `;
 

@@ -58,7 +58,6 @@ const PictureList = styled.div`
     grid-row-end: 2;
   }
 `;
-
 const ImgPicture = styled.img`
   width: 100%;
   height: 100%;
