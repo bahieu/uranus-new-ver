@@ -82,8 +82,7 @@ const FooterBottom = styled.div`
   justify-content: space-between;
   /* align-items: center; */
   @media ${breakpoint.mobile}, ${breakpoint.tablet} {
-    flex-direction: column;
-    position: relative;
+    display: none;
   }
 `;
 
@@ -97,6 +96,7 @@ const FooterBottomContent = styled.div`
   padding-right: 119px;
   @media ${breakpoint.mobile}, ${breakpoint.tablet} {
     margin-bottom: 50px;
+    padding-right: 98px;
     margin-left: 0;
   }
 `;
@@ -125,11 +125,7 @@ const BrandContent = styled.div`
   height: auto;
   vertical-align: top;
 `;
-const MadeByPC = styled.div`
-  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
-    display: none;
-  }
-`;
+
 const MadeByMobile = styled.div`
   display: none;
   @media ${breakpoint.mobile}, ${breakpoint.tablet} {
@@ -141,6 +137,15 @@ const MadeByMobile = styled.div`
     position: absolute;
     bottom: 0;
     background-color: #f1f1f1;
+  }
+`;
+const YearMobile = styled.div`
+  display: none;
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    display: block;
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
   }
 `;
 
@@ -168,7 +173,7 @@ const Footer = () => {
         <ContainerContact>
           <Row className="justify-content-between item-align   ">
             {contactUs.map((v, i) => (
-              <Col key={i} xs={12} className="item-align">
+              <Col key={i} xs={12} lg={6} className="item-align">
                 <Title fontSize="16px" lineHeight="24px">
                   {v.title}
                 </Title>
@@ -194,16 +199,19 @@ const Footer = () => {
           <Title fontSize="12px" lineHeight="18px">
             <u>© 2022 Uranus</u>
           </Title>
-          <MadeByPC>
-            <Description fontSize="12px" lineHeight="18px">
-              Made with ☕ by{' '}
-              <FooterLink>
-                <u>Uranus</u>
-              </FooterLink>
-            </Description>
-          </MadeByPC>
+          <Description fontSize="12px" lineHeight="18px">
+            Made with ☕ by{' '}
+            <FooterLink>
+              <u>Uranus</u>
+            </FooterLink>
+          </Description>
         </FooterBottom>
       </FooterBottomContent>
+      <YearMobile>
+        <Title fontSize="12px" lineHeight="18px">
+          <u>© 2022 Uranus</u>
+        </Title>
+      </YearMobile>
       <MadeByMobile>
         <Description fontSize="12px" lineHeight="18px">
           Made with ☕ by{' '}

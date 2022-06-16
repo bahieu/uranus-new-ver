@@ -30,9 +30,6 @@ const Wrapper = styled.div`
   .ml-40 {
     margin-left: 40px;
   }
-  .des-width {
-    width: 272px;
-  }
   .head__content {
     position: relative;
   }
@@ -72,7 +69,9 @@ const BottomWork = styled.div`
 const ContentBody = styled.div`
   position: relative;
   padding-right: 20px;
-  left: 55%;
+  /* left: 55%; */
+  margin-left: auto;
+  text-align: right;
 `;
 
 const WorkBodyContent = styled.div`
@@ -137,37 +136,29 @@ const SecondWork: React.FC = () => {
           <Col xs={8} className="p-0 mb-5">
             <ImgWork src={w204} />
           </Col>
-          <Col className="ml-40 p-0">
+          <Col lg={2} className="ml-40 p-0">
             <Title lineHeight="24px" fontSize="25px" marginTop="0">
               Latest {'&'} greatest.
             </Title>
-            <Description
-              fontSize="14px"
-              lineHeight="24px"
-              className="des-width"
-            >
+            <Description fontSize="14px" lineHeight="24px">
               Creating a next-generation money-transfer service to transform the
               way money moves.
             </Description>
           </Col>
         </Row>
         <Row className="m-0 flex-nowrap">
-          <Col className="col-padding">
+          <Col lg={4} className="col-padding">
             <ContentBody>
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Latest {'&'} greatest.
               </Title>
-              <Description
-                fontSize="14px"
-                lineHeight="24px"
-                className="des-width"
-              >
+              <Description fontSize="14px" lineHeight="24px">
                 Creating a next-generation money-transfer service to transform
                 the way money moves.
               </Description>
             </ContentBody>
           </Col>
-          <Col xs={8} className="p-0">
+          <Col lg={8} className="p-0">
             <ImgWork src={w205} />
           </Col>
         </Row>

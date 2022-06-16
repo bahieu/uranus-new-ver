@@ -23,11 +23,13 @@ const Wrapper = styled.div`
   }
   .left__content {
     position: relative;
+    margin-left: auto;
+    text-align: center;
+    padding-right: 5px;
   }
 `;
 const WorkContent = styled.div`
   background-color: #ffffff;
-  width: 141px;
 `;
 const ImgWork = styled.img`
   width: 100%;
