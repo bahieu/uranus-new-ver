@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container } from 'react-bootstrap';
+import { Accordion, Container } from 'react-bootstrap';
 
 import { Rectangle } from 'src/component/shapes';
 import { Description, Title } from 'src/styles/Title';
-import arrow from 'src/assets/imgs/question/arrow.png';
+import { questions } from 'src/data/questionList';
+import breakpoint from 'src/constant/devices';
 
 const Wrapper = styled.div`
   position: relative;
@@ -15,88 +16,107 @@ const Wrapper = styled.div`
     flex-flow: column wrap;
     align-items: center;
   }
+
+  .accordion-item {
+    border: none;
+  }
+  .accordion-button {
+    &:not(.collapsed) {
+      background-color: #fff;
+      box-shadow: none;
+      color: #00a3ff;
+    }
+    &:focus {
+      border-color: #fff;
+      box-shadow: none;
+    }
+    &::after {
+      margin-top: 25px;
+    }
+    &:focus {
+      border-color: #fff;
+    }
+  }
+  .accordion {
+    width: 100%;
+  }
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    .title__question {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 27px;
+    }
+    .accordion-button {
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+`;
+const TitleQuestion = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  width: 100%;
 `;
 
 const HeaderQuestion = styled.div`
   text-align: center;
   width: 30%;
-`;
-const BodyQuestion = styled.div`
-  .title__question {
-    cursor: pointer;
-    &:hover {
-      color: #00a3ff;
-    }
+  @media ${breakpoint.mobile}, ${breakpoint.tablet} {
+    width: 50%;
   }
 `;
-const ImgArrow = styled.img`
-  width: 11px;
-  height: 7px;
-  object-fit: contain;
-`;
+
 const Shapes = styled.div`
   display: flex;
   align-items: center;
 `;
 const Question: React.FC = () => {
   return (
-    <Wrapper className="d-none d-xl-block">
+    <Wrapper>
       <Container className="content">
         <HeaderQuestion>
-          <Title fontSize="49px" lineHeight="48px">
+          <Title
+            fontSize="49px"
+            lineHeight="48px"
+            fontWeight="700"
+            className="title__question"
+          >
             Have any question?
           </Title>
         </HeaderQuestion>
-        <BodyQuestion>
-          <Title fontSize="16px" lineHeight="24px" className="title__question">
-            Title Question 1
-          </Title>
-          <Shapes>
-            <Rectangle
-              width="557px"
-              height="2px"
-              bgColor="#C5CFF3"
-              marginRight="8px"
-            />
-            <ImgArrow src={arrow} />
-          </Shapes>
-          <Description fontSize="16px" lineHeight="24px" marginBottom="24px">
-            Treasury (Include: 20% operation, 30% for liquidity and 50%
-            cashBack)
-          </Description>
-          <Title
-            fontSize="16px"
-            lineHeight="24px"
-            marginTop="40px"
-            className="title__question"
-          >
-            Title Question 2
-          </Title>
-          <Shapes>
-            <Rectangle
-              width="557px"
-              height="2px"
-              bgColor="#C5CFF3"
-              marginRight="8px"
-            />
-          </Shapes>
-          <Title
-            fontSize="16px"
-            lineHeight="24px"
-            marginTop="40px"
-            className="title__question"
-          >
-            Title Question 3
-          </Title>
-          <Shapes>
-            <Rectangle
-              width="557px"
-              height="2px"
-              bgColor="#C5CFF3"
-              marginRight="8px"
-            />
-          </Shapes>
-        </BodyQuestion>
+        <Accordion alwaysOpen>
+          {questions.map((v, i) => (
+            <Accordion.Item eventKey={String(i)} key={i}>
+              <Accordion.Header>
+                <TitleQuestion>
+                  {v.title}
+                  <Shapes>
+                    <Rectangle
+                      width="100%"
+                      height="2px"
+                      bgColor="#C5CFF3"
+                      marginRight="8px"
+                    />
+                  </Shapes>
+                </TitleQuestion>
+              </Accordion.Header>
+              <Accordion.Body>
+                <Description
+                  fontSize="16px"
+                  lineHeight="24px"
+                  marginBottom="24px"
+                >
+                  {v.description}
+                </Description>
+              </Accordion.Body>
+            </Accordion.Item>
+          ))}
+        </Accordion>
       </Container>
     </Wrapper>
   );

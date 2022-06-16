@@ -58,7 +58,7 @@ const Wrapper = styled.div`
 const PictureList = styled.div`
   padding: 20px;
   display: grid;
-  padding: 80px 3% 0 14%;
+  padding: 80px 0 0 14%;
   grid-template-columns: 1fr 0.5fr;
   gap: 16px;
   .grid__item-1 {

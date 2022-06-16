@@ -21,7 +21,7 @@ const Wrapper = styled.header`
   .header-menu {
     display: flex;
     padding: 0;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
   @media ${breakpoint.mobile}, ${breakpoint.tablet} {
@@ -191,7 +191,7 @@ const Header: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <Row className="justify-content-lg-between align-baseline">
+        <Row className="justify-content-lg-between align-baseline m-0">
           <Col xs={6} lg={2} className="p-0 ">
             <MobileNavbarIcon htmlFor="nav-mb-input">
               <MobileNavbarImg src={mobileNavIcon} />
