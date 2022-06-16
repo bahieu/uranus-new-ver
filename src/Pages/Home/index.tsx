@@ -7,7 +7,7 @@ import CarouselMobile from './CarouselMobile';
 import JoinOurCommunity from './JoinOurCommunity';
 import JoinOurCommunityMobile from './JoinOurCommunityMobile';
 import Question from './Questions';
-import QuestionsMobile from './QuestionsMobile';
+// import QuestionsMobile from './QuestionsMobile';
 import SecondWork from './SecondWork';
 import SecondWorkMobile from './SecondWorkMobile';
 import ThirdWork from './ThirdWork';
@@ -27,7 +27,7 @@ export const HomePage: React.FC = () => {
       <ThirdWork />
       <ThirdWorkMobile />
       <Question />
-      <QuestionsMobile />
+      {/* <QuestionsMobile /> */}
       <JoinOurCommunity />
       <JoinOurCommunityMobile />
     </MainLayout>
