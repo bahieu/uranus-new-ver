@@ -10,6 +10,11 @@ import w205 from 'src/assets/imgs/work02/w205.png';
 import { Title, Description } from 'src/styles/Title';
 import { Rectangle } from 'src/component/shapes';
 import breakpoint from 'src/constant/devices';
+import {
+  ImgZoom,
+  TextMoveCenterX,
+  TextMoveCenterY,
+} from 'src/styles/Aninations';
 
 const Wrapper = styled.div`
   position: relative;
@@ -56,6 +61,24 @@ const ImgWork = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+  &:hover {
+    animation: ${ImgZoom} 1s 1 forwards;
+  }
+  @media ${breakpoint.tablet} {
+    object-fit: fill;
+  }
+`;
+const ThirdContent = styled.div``;
+const ThirdImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  &:hover {
+    animation: ${ImgZoom} 1s 1 forwards;
+    ${ThirdContent} & + & {
+      animation: ${TextMoveCenterY} 0.7s 1 linear forwards;
+    }
+  }
   @media ${breakpoint.tablet} {
     object-fit: fill;
   }
@@ -74,8 +97,15 @@ const ContentBody = styled.div`
   text-align: right;
 `;
 
-const WorkBodyContent = styled.div`
-  order: 1;
+const FirstContent = styled.div`
+  ${ImgWork}:hover ~ && {
+    animation: ${TextMoveCenterX} 0.7s 1 linear forwards;
+  }
+`;
+const SecondContent = styled.div`
+  ${ImgWork}:hover ~ && {
+    animation: ${TextMoveCenterX} 0.7s 1 linear forwards;
+  }
 `;
 
 const SecondWork: React.FC = () => {
@@ -111,39 +141,43 @@ const SecondWork: React.FC = () => {
         <Row className="body__content__Work">
           <Col className="body__workImg">
             <ImgWork src={w202} />
-            <WorkBodyContent>
+            <FirstContent>
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Amplifying audio.
               </Title>
               <Description fontSize="14px" lineHeight="24px">
                 Bringing the world to the Tokyo Olympics.
               </Description>
-            </WorkBodyContent>
+            </FirstContent>
           </Col>
           <Col className="col-2-pad">
             <ImgWork src={w203} />
-            <Title lineHeight="24px" fontSize="25px" marginTop="0">
-              Above {'&'} beyond.
-            </Title>
-            <Description fontSize="14px" lineHeight="24px">
-              Bringing the world to the Tokyo Olympics.
-            </Description>
+            <SecondContent>
+              <Title lineHeight="24px" fontSize="25px" marginTop="0">
+                Above {'&'} beyond.
+              </Title>
+              <Description fontSize="14px" lineHeight="24px">
+                Bringing the world to the Tokyo Olympics.
+              </Description>
+            </SecondContent>
           </Col>
         </Row>
       </Container>
       <BottomWork>
         <Row className="mb-50 m-0 flex-nowrap">
           <Col xs={8} className="p-0 mb-5">
-            <ImgWork src={w204} />
+            <ThirdImg src={w204} />
           </Col>
           <Col lg={2} className="ml-40 p-0">
-            <Title lineHeight="24px" fontSize="25px" marginTop="0">
-              Latest {'&'} greatest.
-            </Title>
-            <Description fontSize="14px" lineHeight="24px">
-              Creating a next-generation money-transfer service to transform the
-              way money moves.
-            </Description>
+            <ThirdContent>
+              <Title lineHeight="24px" fontSize="25px" marginTop="0">
+                Latest {'&'} greatest.
+              </Title>
+              <Description fontSize="14px" lineHeight="24px">
+                Creating a next-generation money-transfer service to transform
+                the way money moves.
+              </Description>
+            </ThirdContent>
           </Col>
         </Row>
         <Row className="m-0 flex-nowrap">

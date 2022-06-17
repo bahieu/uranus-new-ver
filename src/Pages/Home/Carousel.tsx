@@ -9,6 +9,7 @@ import { Description, Title } from 'src/styles/Title';
 import Button from 'src/component/button';
 import { Rectangle } from 'src/component/shapes';
 import breakpoint from 'src/constant/devices';
+import { MoveRight, ImgZoom } from 'src/styles/Aninations';
 
 const Wrapper = styled.div`
   position: relative;
@@ -76,6 +77,9 @@ const ImgPicture = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  &:hover {
+    animation: ${ImgZoom} 2s 1 forwards;
+  }
 `;
 const WorkContent = styled.div`
   position: absolute;
@@ -87,8 +91,6 @@ const WorkContent = styled.div`
     left: 0;
     transform: translateX(40px);
     .carousel__btn {
-      background-color: #00a3ff;
-      color: #fff;
       border-radius: 10px;
       transform: translateX(-10px);
     }
@@ -114,7 +116,12 @@ const HeadWorkContent = styled.div`
   @media ${breakpoint.tablet} {
   }
 `;
-const BodyContent = styled.div``;
+const BodyContent = styled.div`
+  &:hover {
+    position: relative;
+    animation: ${MoveRight} 1s 1 forwards;
+  }
+`;
 const Slide = styled.div``;
 const CarouselFirstWork: React.FC = () => {
   const imgList: any[] = [work01, work02, work03];

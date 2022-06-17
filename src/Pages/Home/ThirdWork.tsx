@@ -83,39 +83,35 @@ const ThirdWork: React.FC = () => {
           </Row>
         </BrandList>
       </Container>
-      <Row>
-        <Col></Col>
-        <Col lg={12} xl={11} xxl={10} className="p-0">
-          <BottomThirdWork>
-            <BottomThirdWorkContent>
-              <ContentTitle>
-                <Title lineHeight="18px" fontSize="18px" color="#fff">
-                  Work
-                </Title>
-                <Rectangle
-                  bgColor="#00A3FF"
-                  width="216px"
-                  height="2px"
-                  marginLeft="20px"
-                />
-              </ContentTitle>
-              <ContentBody>
-                <Title
-                  lineHeight="48px"
-                  fontSize="49px"
-                  className="title"
-                  color="#fff"
-                >
-                  Be one of us..
-                </Title>
-                <Description lineHeight="24px" fontSize="14px" color="#fff">
-                  Bringing the world to the Tokyo Olympics.
-                </Description>
-              </ContentBody>
-            </BottomThirdWorkContent>
-          </BottomThirdWork>
-        </Col>
-      </Row>
+
+      <BottomThirdWork>
+        <BottomThirdWorkContent>
+          <ContentTitle>
+            <Title lineHeight="18px" fontSize="18px" color="#fff">
+              Work
+            </Title>
+            <Rectangle
+              bgColor="#00A3FF"
+              width="216px"
+              height="2px"
+              marginLeft="20px"
+            />
+          </ContentTitle>
+          <ContentBody>
+            <Title
+              lineHeight="48px"
+              fontSize="49px"
+              className="title"
+              color="#fff"
+            >
+              Be one of us..
+            </Title>
+            <Description lineHeight="24px" fontSize="14px" color="#fff">
+              Bringing the world to the Tokyo Olympics.
+            </Description>
+          </ContentBody>
+        </BottomThirdWorkContent>
+      </BottomThirdWork>
     </Wrapper>
   );
 };

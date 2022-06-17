@@ -25,6 +25,10 @@ const Wrapper = styled.div`
       background-color: #fff;
       box-shadow: none;
       color: #00a3ff;
+      &::after {
+        display: block;
+        transform: none;
+      }
     }
     &:focus {
       border-color: #fff;
@@ -32,6 +36,7 @@ const Wrapper = styled.div`
     }
     &::after {
       margin-top: 25px;
+      display: none;
     }
     &:focus {
       border-color: #fff;
