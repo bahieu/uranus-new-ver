@@ -10,11 +10,6 @@ import w205 from 'src/assets/imgs/work02/w205.png';
 import { Title, Description } from 'src/styles/Title';
 import { Rectangle } from 'src/component/shapes';
 import breakpoint from 'src/constant/devices';
-import {
-  ImgZoom,
-  TextMoveCenterX,
-  TextMoveCenterY,
-} from 'src/styles/Aninations';
 
 const Wrapper = styled.div`
   position: relative;
@@ -61,9 +56,7 @@ const ImgWork = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  &:hover {
-    animation: ${ImgZoom} 1s 1 forwards;
-  }
+
   @media ${breakpoint.tablet} {
     object-fit: fill;
   }
@@ -73,12 +66,7 @@ const ThirdImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-  &:hover {
-    animation: ${ImgZoom} 1s 1 forwards;
-    ${ThirdContent} & + & {
-      animation: ${TextMoveCenterY} 0.7s 1 linear forwards;
-    }
-  }
+
   @media ${breakpoint.tablet} {
     object-fit: fill;
   }
@@ -97,22 +85,19 @@ const ContentBody = styled.div`
   text-align: right;
 `;
 
-const FirstContent = styled.div`
-  ${ImgWork}:hover ~ && {
-    animation: ${TextMoveCenterX} 0.7s 1 linear forwards;
-  }
-`;
-const SecondContent = styled.div`
-  ${ImgWork}:hover ~ && {
-    animation: ${TextMoveCenterX} 0.7s 1 linear forwards;
-  }
-`;
+const FirstContent = styled.div``;
+const SecondContent = styled.div``;
 
 const SecondWork: React.FC = () => {
   return (
     <Wrapper className="d-none d-xl-block">
       <Container>
-        <WorkTitle>
+        <WorkTitle
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+          data-aos-once="false"
+        >
           <Rectangle
             bgColor="#00A3FF"
             width="216px"
@@ -128,7 +113,15 @@ const SecondWork: React.FC = () => {
             <ImgWork src={w201} />
           </Col>
           <Col>
-            <HeaderWorkContent>
+            <HeaderWorkContent
+              data-aos="flip-down"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+              // data-aos-easing="ease-in-out"
+              // data-aos-mirror="true"
+              // data-aos-once="false"
+              // data-aos-anchor-placement="top-center"
+            >
               <Title lineHeight="48px" fontSize="49px" marginBottom="0">
                 Latest {'&'} greatest.
               </Title>
