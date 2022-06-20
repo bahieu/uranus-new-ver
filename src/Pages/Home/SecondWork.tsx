@@ -96,7 +96,6 @@ const SecondWork: React.FC = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-delay="200"
-          data-aos-once="false"
         >
           <Rectangle
             bgColor="#00A3FF"
@@ -110,17 +109,18 @@ const SecondWork: React.FC = () => {
         </WorkTitle>
         <Row className="head__content">
           <Col lg={12} className="head__work_img">
-            <ImgWork src={w201} />
+            <ImgWork
+              src={w201}
+              data-aos="flip-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            />
           </Col>
           <Col>
             <HeaderWorkContent
               data-aos="flip-down"
               data-aos-delay="500"
               data-aos-duration="1000"
-              // data-aos-easing="ease-in-out"
-              // data-aos-mirror="true"
-              // data-aos-once="false"
-              // data-aos-anchor-placement="top-center"
             >
               <Title lineHeight="48px" fontSize="49px" marginBottom="0">
                 Latest {'&'} greatest.
@@ -133,8 +133,14 @@ const SecondWork: React.FC = () => {
         </Row>
         <Row className="body__content__Work">
           <Col className="body__workImg">
-            <ImgWork src={w202} />
-            <FirstContent>
+            <ImgWork
+              src={w202}
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            />
+            <FirstContent data-aos="zoom-out-up">
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Amplifying audio.
               </Title>
@@ -144,8 +150,18 @@ const SecondWork: React.FC = () => {
             </FirstContent>
           </Col>
           <Col className="col-2-pad">
-            <ImgWork src={w203} />
-            <SecondContent>
+            <ImgWork
+              src={w203}
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            />
+            <SecondContent
+              data-aos="zoom-out-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Above {'&'} beyond.
               </Title>
@@ -159,10 +175,19 @@ const SecondWork: React.FC = () => {
       <BottomWork>
         <Row className="mb-50 m-0 flex-nowrap">
           <Col xs={8} className="p-0 mb-5">
-            <ThirdImg src={w204} />
+            <ThirdImg
+              src={w204}
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            />
           </Col>
           <Col lg={2} className="ml-40 p-0">
-            <ThirdContent>
+            <ThirdContent
+              data-aos="fade-left"
+              data-aos-delay="700"
+              data-aos-duration="1000"
+            >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Latest {'&'} greatest.
               </Title>
@@ -175,7 +200,11 @@ const SecondWork: React.FC = () => {
         </Row>
         <Row className="m-0 flex-nowrap">
           <Col lg={4} className="col-padding">
-            <ContentBody>
+            <ContentBody
+              data-aos="fade-left"
+              data-aos-delay="400"
+              data-aos-duration="1000"
+            >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Latest {'&'} greatest.
               </Title>
@@ -186,7 +215,12 @@ const SecondWork: React.FC = () => {
             </ContentBody>
           </Col>
           <Col lg={8} className="p-0">
-            <ImgWork src={w205} />
+            <ImgWork
+              src={w205}
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            />
           </Col>
         </Row>
       </BottomWork>

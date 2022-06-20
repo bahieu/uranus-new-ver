@@ -84,7 +84,11 @@ const Question: React.FC = () => {
   return (
     <Wrapper>
       <Container className="content">
-        <HeaderQuestion>
+        <HeaderQuestion
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
           <Title
             fontSize="49px"
             lineHeight="48px"
@@ -96,7 +100,14 @@ const Question: React.FC = () => {
         </HeaderQuestion>
         <Accordion alwaysOpen>
           {questions.map((v, i) => (
-            <Accordion.Item eventKey={String(i)} key={i}>
+            <Accordion.Item
+              eventKey={String(i)}
+              key={i}
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-center"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
               <Accordion.Header>
                 <TitleQuestion>
                   {v.title}
