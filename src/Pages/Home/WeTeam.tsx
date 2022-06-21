@@ -40,7 +40,12 @@ const WeTeam: React.FC = () => {
     <Wrapper className="d-none d-xl-block">
       <Container>
         <Row>
-          <Col className="text-center">
+          <Col
+            className="text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
             <Title lineHeight="81px" fontSize="54px" marginBottom="0">
               We team.
             </Title>
@@ -56,7 +61,14 @@ const WeTeam: React.FC = () => {
         </Row>
         <Row>
           {members.map((v, i) => (
-            <Col key={i} className="content ">
+            <Col
+              key={i}
+              className="content "
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              data-aos-duration="1000"
+              data-aos-delay="200"
+            >
               <Circle>
                 <ImgMember src={v.img} />
               </Circle>

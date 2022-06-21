@@ -24,7 +24,11 @@ const JoinOurCommunity: React.FC = () => {
   return (
     <Wrapper className="d-none d-xl-block">
       <Container className="content">
-        <HeadCommunity>
+        <HeadCommunity
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="1000"
+        >
           <Title lineHeight="48px" fontSize="49px">
             Yay! 🎉 <br /> Join our community
           </Title>

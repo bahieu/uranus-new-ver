@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Carousel, Container } from 'react-bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 import work01 from 'src/assets/imgs/work01/w01.png';
 import work02 from 'src/assets/imgs/work01/w02.png';
@@ -87,8 +91,6 @@ const WorkContent = styled.div`
     left: 0;
     transform: translateX(40px);
     .carousel__btn {
-      background-color: #00a3ff;
-      color: #fff;
       border-radius: 10px;
       transform: translateX(-10px);
     }
@@ -114,7 +116,11 @@ const HeadWorkContent = styled.div`
   @media ${breakpoint.tablet} {
   }
 `;
-const BodyContent = styled.div``;
+const BodyContent = styled.div`
+  &:hover {
+    position: relative;
+  }
+`;
 const Slide = styled.div``;
 const CarouselFirstWork: React.FC = () => {
   const imgList: any[] = [work01, work02, work03];
@@ -125,16 +131,26 @@ const CarouselFirstWork: React.FC = () => {
       <Container>
         <Carousel interval={3000} controls={false}>
           {/* Slide 01 start */}
+
           <Carousel.Item>
             <Slide>
-              <PictureList>
+              <PictureList
+                data-aos="zoom-in"
+                data-aos-delay="700"
+                data-aos-duration="1200"
+                data-aos-easing="ease"
+              >
                 {imgList.map((v, i) => (
                   <div key={i} className={i === 0 ? 'grid__item-1' : undefined}>
                     <ImgPicture src={v} />
                   </div>
                 ))}
               </PictureList>
-              <WorkContent>
+              <WorkContent
+                data-aos="fade-right"
+                data-aos-delay="1000"
+                data-aos-easing="ease-in-out"
+              >
                 <HeadWorkContent>
                   <Title lineHeight="18px" fontSize="18px">
                     Work
@@ -170,6 +186,7 @@ const CarouselFirstWork: React.FC = () => {
               </WorkContent>
             </Slide>
           </Carousel.Item>
+
           {/* Slide 01 end */}
 
           {/* Slide 02 start */}

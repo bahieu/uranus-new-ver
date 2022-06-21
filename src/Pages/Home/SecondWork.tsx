@@ -56,6 +56,17 @@ const ImgWork = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+
+  @media ${breakpoint.tablet} {
+    object-fit: fill;
+  }
+`;
+const ThirdContent = styled.div``;
+const ThirdImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
   @media ${breakpoint.tablet} {
     object-fit: fill;
   }
@@ -74,15 +85,18 @@ const ContentBody = styled.div`
   text-align: right;
 `;
 
-const WorkBodyContent = styled.div`
-  order: 1;
-`;
+const FirstContent = styled.div``;
+const SecondContent = styled.div``;
 
 const SecondWork: React.FC = () => {
   return (
     <Wrapper className="d-none d-xl-block">
       <Container>
-        <WorkTitle>
+        <WorkTitle
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
           <Rectangle
             bgColor="#00A3FF"
             width="216px"
@@ -95,10 +109,19 @@ const SecondWork: React.FC = () => {
         </WorkTitle>
         <Row className="head__content">
           <Col lg={12} className="head__work_img">
-            <ImgWork src={w201} />
+            <ImgWork
+              src={w201}
+              data-aos="flip-up"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            />
           </Col>
           <Col>
-            <HeaderWorkContent>
+            <HeaderWorkContent
+              data-aos="flip-down"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
               <Title lineHeight="48px" fontSize="49px" marginBottom="0">
                 Latest {'&'} greatest.
               </Title>
@@ -110,45 +133,78 @@ const SecondWork: React.FC = () => {
         </Row>
         <Row className="body__content__Work">
           <Col className="body__workImg">
-            <ImgWork src={w202} />
-            <WorkBodyContent>
+            <ImgWork
+              src={w202}
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            />
+            <FirstContent data-aos="zoom-out-up">
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Amplifying audio.
               </Title>
               <Description fontSize="14px" lineHeight="24px">
                 Bringing the world to the Tokyo Olympics.
               </Description>
-            </WorkBodyContent>
+            </FirstContent>
           </Col>
           <Col className="col-2-pad">
-            <ImgWork src={w203} />
-            <Title lineHeight="24px" fontSize="25px" marginTop="0">
-              Above {'&'} beyond.
-            </Title>
-            <Description fontSize="14px" lineHeight="24px">
-              Bringing the world to the Tokyo Olympics.
-            </Description>
+            <ImgWork
+              src={w203}
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            />
+            <SecondContent
+              data-aos="zoom-out-up"
+              data-aos-delay="300"
+              data-aos-duration="1000"
+            >
+              <Title lineHeight="24px" fontSize="25px" marginTop="0">
+                Above {'&'} beyond.
+              </Title>
+              <Description fontSize="14px" lineHeight="24px">
+                Bringing the world to the Tokyo Olympics.
+              </Description>
+            </SecondContent>
           </Col>
         </Row>
       </Container>
       <BottomWork>
         <Row className="mb-50 m-0 flex-nowrap">
           <Col xs={8} className="p-0 mb-5">
-            <ImgWork src={w204} />
+            <ThirdImg
+              src={w204}
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            />
           </Col>
           <Col lg={2} className="ml-40 p-0">
-            <Title lineHeight="24px" fontSize="25px" marginTop="0">
-              Latest {'&'} greatest.
-            </Title>
-            <Description fontSize="14px" lineHeight="24px">
-              Creating a next-generation money-transfer service to transform the
-              way money moves.
-            </Description>
+            <ThirdContent
+              data-aos="fade-left"
+              data-aos-delay="700"
+              data-aos-duration="1000"
+            >
+              <Title lineHeight="24px" fontSize="25px" marginTop="0">
+                Latest {'&'} greatest.
+              </Title>
+              <Description fontSize="14px" lineHeight="24px">
+                Creating a next-generation money-transfer service to transform
+                the way money moves.
+              </Description>
+            </ThirdContent>
           </Col>
         </Row>
         <Row className="m-0 flex-nowrap">
           <Col lg={4} className="col-padding">
-            <ContentBody>
+            <ContentBody
+              data-aos="fade-left"
+              data-aos-delay="400"
+              data-aos-duration="1000"
+            >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Latest {'&'} greatest.
               </Title>
@@ -159,7 +215,12 @@ const SecondWork: React.FC = () => {
             </ContentBody>
           </Col>
           <Col lg={8} className="p-0">
-            <ImgWork src={w205} />
+            <ImgWork
+              src={w205}
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            />
           </Col>
         </Row>
       </BottomWork>
