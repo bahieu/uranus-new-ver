@@ -106,7 +106,7 @@ const ThirdWork: React.FC = () => {
       </Container>
 
       <BottomThirdWork
-        data-aos="fade-down"
+        data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-offset="200"
         data-aos-delay="500"

@@ -73,7 +73,7 @@ const ThirdWorkMobile: React.FC = () => {
         </Description>
       </ThirdWorkTitle>
       <BrandList>
-        <Row className="text-left">
+        <Row className="text-left" data-aos="fade-up" data-aos-duration="3000">
           {brandList.map((v, i) => (
             <Col xs={9} key={i} className="p-0 content_center">
               <Rectangle width="100%" height="2px" bgColor="#C5CFF3" />
@@ -85,8 +85,17 @@ const ThirdWorkMobile: React.FC = () => {
         </Row>
       </BrandList>
       <BottomThirdWork>
-        <ThirdWorkImg src={w301} />
-        <BottomThirdWorkContent>
+        <ThirdWorkImg
+          src={w301}
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-center"
+          data-aos-duration="500"
+        />
+        <BottomThirdWorkContent
+          data-aos="fade-right"
+          data-aos-delay="800"
+          data-aos-duration="1200"
+        >
           <ContentTitle>
             <Title lineHeight="18px" fontSize="18px" color="#fff">
               Work

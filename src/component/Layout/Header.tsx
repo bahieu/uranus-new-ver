@@ -199,7 +199,12 @@ const Header: React.FC = () => {
             <HeaderBrand>
               <ImgIcon src={logoIcon} />
               <BrandContent>
-                <Title lineHeight="19px" fontSize="22px" className="mb-0">
+                <Title
+                  lineHeight="19px"
+                  fontSize="22px"
+                  fontWeight="600"
+                  className="mb-0"
+                >
                   Uranus.
                 </Title>
                 <Description lineHeight="24px" fontSize="12px" className="mt-0">

@@ -22,7 +22,12 @@ const HeadCommunity = styled.div`
 
 const JoinOurCommunityMobile: React.FC = () => {
   return (
-    <Wrapper className="d-block d-xl-none">
+    <Wrapper
+      className="d-block d-xl-none"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+    >
       <Container className="content">
         <HeadCommunity>
           <Title lineHeight="27px" fontSize="28px" fontWeight="700">

@@ -49,7 +49,10 @@ const WeTeamMobile: React.FC = () => {
   return (
     <Wrapper className="d-block d-xl-none">
       <Container>
-        <HeadContent>
+        <HeadContent
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-center"
+        >
           <Title lineHeight="27px" fontSize="28px" fontWeight="700">
             We Team.
           </Title>
@@ -58,7 +61,13 @@ const WeTeamMobile: React.FC = () => {
           </Description>
         </HeadContent>
         {members.map((v, i) => (
-          <Row key={i} className="flex-nowrap mb-4">
+          <Row
+            key={i}
+            className="flex-nowrap mb-4"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+            data-aos-duration="1200"
+          >
             <Col xs={3} md={2}>
               <Circle>
                 <ImgMember src={v.img} />
