@@ -4,7 +4,7 @@ import { Carousel, Container } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-AOS.init();
+AOS.init({ once: true });
 
 import work01 from 'src/assets/imgs/work01/w01.png';
 import work02 from 'src/assets/imgs/work01/w02.png';

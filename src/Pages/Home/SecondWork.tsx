@@ -95,7 +95,8 @@ const SecondWork: React.FC = () => {
         <WorkTitle
           data-aos="fade-right"
           data-aos-duration="1000"
-          data-aos-delay="200"
+          data-aos-delay="100"
+          data-aos-offset="200"
         >
           <Rectangle
             bgColor="#00A3FF"
