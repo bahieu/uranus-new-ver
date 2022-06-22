@@ -39,8 +39,8 @@ const BottomThirdWork = styled.div`
 const BottomThirdWorkContent = styled.div`
   position: absolute;
   width: 50%;
-  height: 100%;
-  bottom: 0;
+  height: 99.5%;
+  bottom: 2px;
   background: rgba(0, 0, 0, 0.5);
 `;
 const ContentTitle = styled.div`

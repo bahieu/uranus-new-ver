@@ -10,6 +10,7 @@ import w301 from 'src/assets/imgs/work03/w301.png';
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  overflow: hidden;
   margin-bottom: 80px;
 `;
 
@@ -24,11 +25,12 @@ const BrandList = styled.div`
 const BottomThirdWork = styled.div`
   position: relative;
   height: 517px;
-  /* left: 16%; */
 
   background: url(${w301}) center no-repeat;
   background-size: cover;
   background-position: top center;
+
+  width: ${window.innerWidth}px;
 `;
 const BottomThirdWorkContent = styled.div`
   position: absolute;
@@ -49,9 +51,7 @@ const ContentBody = styled.div`
     width: 200px;
   }
 `;
-// const Test = styled.div`
-//   position: relative;
-// `;
+
 const ThirdWork: React.FC = () => {
   return (
     <Wrapper className="d-none d-xl-block">
@@ -104,47 +104,48 @@ const ThirdWork: React.FC = () => {
           </Row>
         </BrandList>
       </Container>
-
-      <BottomThirdWork
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-offset="200"
-        data-aos-delay="500"
-        data-aos-duration="1500"
-      >
-        <BottomThirdWorkContent
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-          data-aos-delay="00"
-          data-aos-duration="1000"
+      <Container className="container__img">
+        <BottomThirdWork
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-offset="200"
+          data-aos-delay="500"
+          data-aos-duration="1500"
         >
-          <ContentTitle>
-            <Title lineHeight="18px" fontSize="18px" color="#fff">
-              Work
-            </Title>
-            <Rectangle
-              bgColor="#00A3FF"
-              width="216px"
-              height="2px"
-              marginLeft="20px"
-            />
-          </ContentTitle>
-          <ContentBody>
-            <Title
-              lineHeight="48px"
-              fontSize="49px"
-              className="title"
-              color="#fff"
-            >
-              Be one of us..
-            </Title>
-            <Description lineHeight="24px" fontSize="14px" color="#fff">
-              Bringing the world to the Tokyo Olympics.
-            </Description>
-          </ContentBody>
-        </BottomThirdWorkContent>
-      </BottomThirdWork>
+          <BottomThirdWorkContent
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            data-aos-delay="00"
+            data-aos-duration="1000"
+          >
+            <ContentTitle>
+              <Title lineHeight="18px" fontSize="18px" color="#fff">
+                Work
+              </Title>
+              <Rectangle
+                bgColor="#00A3FF"
+                width="216px"
+                height="2px"
+                marginLeft="20px"
+              />
+            </ContentTitle>
+            <ContentBody>
+              <Title
+                lineHeight="48px"
+                fontSize="49px"
+                className="title"
+                color="#fff"
+              >
+                Be one of us..
+              </Title>
+              <Description lineHeight="24px" fontSize="14px" color="#fff">
+                Bringing the world to the Tokyo Olympics.
+              </Description>
+            </ContentBody>
+          </BottomThirdWorkContent>
+        </BottomThirdWork>
+      </Container>
     </Wrapper>
   );
 };
