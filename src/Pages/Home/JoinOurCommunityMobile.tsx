@@ -25,7 +25,7 @@ const JoinOurCommunityMobile: React.FC = () => {
     <Wrapper
       className="d-block d-xl-none"
       data-aos="fade-up"
-      data-aos-delay="100"
+      data-aos-delay="500"
       data-aos-duration="1000"
     >
       <Container className="content">
