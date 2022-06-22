@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Carousel, Container } from 'react-bootstrap';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-AOS.init();
 
 import work01 from 'src/assets/imgs/work01/w01.png';
 import work02 from 'src/assets/imgs/work01/w02.png';
@@ -134,23 +130,14 @@ const CarouselFirstWork: React.FC = () => {
 
           <Carousel.Item>
             <Slide>
-              <PictureList
-                data-aos="zoom-in"
-                data-aos-delay="700"
-                data-aos-duration="1200"
-                data-aos-easing="ease"
-              >
+              <PictureList>
                 {imgList.map((v, i) => (
                   <div key={i} className={i === 0 ? 'grid__item-1' : undefined}>
                     <ImgPicture src={v} />
                   </div>
                 ))}
               </PictureList>
-              <WorkContent
-                data-aos="fade-right"
-                data-aos-delay="1000"
-                data-aos-easing="ease-in-out"
-              >
+              <WorkContent>
                 <HeadWorkContent>
                   <Title lineHeight="18px" fontSize="18px">
                     Work
