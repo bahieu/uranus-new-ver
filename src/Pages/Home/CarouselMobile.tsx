@@ -92,7 +92,7 @@ const CarouselMobile: React.FC = () => {
                 </div>
               ))}
             </PictureList>
-            <WorkContent data-aos="fade-up" data-aos-duration="3000">
+            <WorkContent>
               <HeadWorkContent>
                 <Title lineHeight="18px" fontSize="18px">
                   Work
@@ -104,7 +104,7 @@ const CarouselMobile: React.FC = () => {
                   marginLeft="20px"
                 />
               </HeadWorkContent>
-              <BodyContent data-aos="fade-up" data-aos-duration="3000">
+              <BodyContent>
                 <Title lineHeight="48px" fontSize="49px" fontWeight="700">
                   Make huge moves.
                 </Title>
@@ -143,7 +143,7 @@ const CarouselMobile: React.FC = () => {
                   marginLeft="20px"
                 />
               </HeadWorkContent>
-              <BodyContent data-aos="fade-up" data-aos-duration="3000">
+              <BodyContent>
                 <Title lineHeight="48px" fontSize="49px" fontWeight="700">
                   Make huge moves.
                 </Title>

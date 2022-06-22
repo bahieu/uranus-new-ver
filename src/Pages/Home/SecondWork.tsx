@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Container, Row } from 'react-bootstrap';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({ once: true });
 
 import w201 from 'src/assets/imgs/work02/w201.png';
 import w202 from 'src/assets/imgs/work02/w202.png';
@@ -95,8 +99,7 @@ const SecondWork: React.FC = () => {
         <WorkTitle
           data-aos="fade-right"
           data-aos-duration="1000"
-          data-aos-delay="100"
-          data-aos-offset="200"
+          data-aos-delay="500"
         >
           <Rectangle
             bgColor="#00A3FF"
@@ -114,7 +117,7 @@ const SecondWork: React.FC = () => {
               src={w201}
               data-aos="flip-up"
               data-aos-delay="500"
-              data-aos-duration="1000"
+              data-aos-duration="3000"
             />
           </Col>
           <Col>
