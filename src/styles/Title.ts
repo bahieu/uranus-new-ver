@@ -13,7 +13,7 @@ interface StyleDescription extends StyleTitle {}
 export const Title = styled.h1<StyleTitle>`
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 600)};
+  font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : 700)};
   font-size: ${({ fontSize }) => (fontSize ? fontSize : '34px')};
   line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : '34px')};
   color: ${({ theme, color }) => (!color ? theme.text : color)};

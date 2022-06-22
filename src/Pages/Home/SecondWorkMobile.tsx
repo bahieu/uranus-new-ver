@@ -41,10 +41,10 @@ const SecondWorkMobile: React.FC = () => {
   return (
     <Wrapper className="d-block d-xl-none">
       <Row>
-        <Col xs={7}>
+        <Col xs={7} data-aos="fade-right" data-aos-duration="1200">
           <ImgWork src={w201} />
         </Col>
-        <Col xs={5}>
+        <Col xs={5} data-aos="fade-left" data-aos-duration="1200">
           <WorkContent>
             <Title
               lineHeight="21px"
@@ -62,7 +62,12 @@ const SecondWorkMobile: React.FC = () => {
       </Row>
       <Row>
         <Col xs={5}>
-          <WorkContent className="left__content">
+          <WorkContent
+            className="left__content"
+            data-aos="fade-right"
+            data-aos-delay="300"
+            data-aos-duration="1200"
+          >
             <Title lineHeight="24px" fontSize="25px" marginTop="0">
               Amplifying audio.
             </Title>
@@ -72,15 +77,29 @@ const SecondWorkMobile: React.FC = () => {
           </WorkContent>
         </Col>
         <Col xs={7}>
-          <ImgWork src={w201} />
+          <ImgWork
+            src={w201}
+            data-aos="fade-left"
+            data-aos-delay="300"
+            data-aos-duration="1200"
+          />
         </Col>
       </Row>
       <Row>
         <Col xs={7}>
-          <ImgWork src={w201} />
+          <ImgWork
+            src={w201}
+            data-aos="fade-right"
+            data-aos-delay="300"
+            data-aos-duration="1200"
+          />
         </Col>
         <Col xs={5}>
-          <WorkContent>
+          <WorkContent
+            data-aos="fade-left"
+            data-aos-delay="300"
+            data-aos-duration="1200"
+          >
             <Title lineHeight="24px" fontSize="25px" marginTop="0">
               Above {'&'} beyond.
             </Title>

@@ -26,7 +26,7 @@ const JoinOurCommunity: React.FC = () => {
       <Container className="content">
         <HeadCommunity
           data-aos="fade-up"
-          data-aos-delay="400"
+          data-aos-delay="500"
           data-aos-duration="1000"
         >
           <Title lineHeight="48px" fontSize="49px">

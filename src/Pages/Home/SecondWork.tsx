@@ -122,7 +122,12 @@ const SecondWork: React.FC = () => {
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <Title lineHeight="48px" fontSize="49px" marginBottom="0">
+              <Title
+                lineHeight="48px"
+                fontSize="49px"
+                marginBottom="0"
+                fontWeight="700"
+              >
                 Latest {'&'} greatest.
               </Title>
               <Description fontSize="14px" lineHeight="24px">

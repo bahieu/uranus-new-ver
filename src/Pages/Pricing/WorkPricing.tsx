@@ -79,7 +79,13 @@ const WorkPricing: React.FC = () => {
       <FourWork>
         <Container className="body__content">
           <Row className="flex-d-column flex-xl-row">
-            <Col md={4} lg={6} className="left__content">
+            <Col
+              md={4}
+              lg={6}
+              className="left__content"
+              data-aos="fade-right"
+              data-aos-delay="500"
+            >
               <HeadPricing>
                 <Title lineHeight="18px" fontSize="18px">
                   Work
@@ -114,7 +120,7 @@ const WorkPricing: React.FC = () => {
               </BodyText>
             </Col>
             <Col md={8} lg={6} className="img__size">
-              <ImgWork src={work04} />
+              <ImgWork src={work04} data-aos="fade-left" data-aos-delay="500" />
             </Col>
           </Row>
         </Container>
