@@ -65,8 +65,8 @@ const SecondWorkMobile: React.FC = () => {
           <WorkContent
             className="left__content"
             data-aos="fade-right"
-            data-aos-delay="300"
-            data-aos-duration="1200"
+            data-aos-delay="400"
+            data-aos-duration="1500"
           >
             <Title lineHeight="24px" fontSize="25px" marginTop="0">
               Amplifying audio.
@@ -80,8 +80,8 @@ const SecondWorkMobile: React.FC = () => {
           <ImgWork
             src={w201}
             data-aos="fade-left"
-            data-aos-delay="300"
-            data-aos-duration="1200"
+            data-aos-delay="400"
+            data-aos-duration="1500"
           />
         </Col>
       </Row>

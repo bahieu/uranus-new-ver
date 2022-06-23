@@ -43,8 +43,8 @@ const WeTeam: React.FC = () => {
           <Col
             className="text-center"
             data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
+            data-aos-duration="1200"
+            data-aos-delay="600"
           >
             <Title lineHeight="81px" fontSize="54px" marginBottom="0">
               We team.

@@ -147,9 +147,13 @@ const SecondWork: React.FC = () => {
               data-aos="fade-right"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
-              data-aos-duration="1000"
+              data-aos-duration="1200"
             />
-            <FirstContent data-aos="zoom-out-up">
+            <FirstContent
+              data-aos="zoom-out-up"
+              data-aos-duration="1200"
+              data-aos-delay="200"
+            >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Amplifying audio.
               </Title>
@@ -164,12 +168,12 @@ const SecondWork: React.FC = () => {
               data-aos="fade-left"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
-              data-aos-duration="1000"
+              data-aos-duration="1200"
             />
             <SecondContent
               data-aos="zoom-out-up"
               data-aos-delay="300"
-              data-aos-duration="1000"
+              data-aos-duration="1200"
             >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Above {'&'} beyond.
@@ -187,15 +191,16 @@ const SecondWork: React.FC = () => {
             <ThirdImg
               src={w204}
               data-aos="fade-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
+              data-aos-delay="200"
+              data-aos-offset="250"
+              data-aos-duration="1800"
             />
           </Col>
           <Col lg={2} className="ml-40 p-0">
             <ThirdContent
               data-aos="fade-left"
-              data-aos-delay="700"
-              data-aos-duration="1000"
+              data-aos-delay="1000"
+              data-aos-duration="1200"
             >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Latest {'&'} greatest.
@@ -210,9 +215,9 @@ const SecondWork: React.FC = () => {
         <Row className="m-0 flex-nowrap">
           <Col lg={4} className="col-padding">
             <ContentBody
-              data-aos="fade-left"
-              data-aos-delay="400"
-              data-aos-duration="1000"
+              data-aos="fade-right"
+              data-aos-delay="1000"
+              data-aos-duration="1200"
             >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Latest {'&'} greatest.
@@ -226,9 +231,10 @@ const SecondWork: React.FC = () => {
           <Col lg={8} className="p-0">
             <ImgWork
               src={w205}
-              data-aos="fade-right"
+              data-aos="fade-left"
+              data-aos-delay="200"
+              data-aos-duration="1800"
               data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
             />
           </Col>
         </Row>
