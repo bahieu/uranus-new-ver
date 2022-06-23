@@ -110,14 +110,14 @@ const ThirdWork: React.FC = () => {
           data-aos-easing="linear"
           data-aos-offset="200"
           data-aos-delay="500"
-          data-aos-duration="1500"
+          data-aos-duration="2000"
         >
           <BottomThirdWorkContent
             data-aos="fade-right"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
-            data-aos-delay="00"
-            data-aos-duration="1000"
+            data-aos-delay="500"
+            data-aos-duration="2800"
           >
             <ContentTitle>
               <Title lineHeight="18px" fontSize="18px" color="#fff">

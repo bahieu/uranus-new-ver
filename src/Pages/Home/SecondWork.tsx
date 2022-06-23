@@ -117,7 +117,7 @@ const SecondWork: React.FC = () => {
               src={w201}
               data-aos="flip-up"
               data-aos-delay="500"
-              data-aos-duration="3000"
+              data-aos-duration="2500"
             />
           </Col>
           <Col>
@@ -147,7 +147,7 @@ const SecondWork: React.FC = () => {
               data-aos="fade-right"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
-              data-aos-duration="1200"
+              data-aos-duration="1800"
             />
             <FirstContent
               data-aos="zoom-out-up"
@@ -168,7 +168,7 @@ const SecondWork: React.FC = () => {
               data-aos="fade-left"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
-              data-aos-duration="1200"
+              data-aos-duration="1800"
             />
             <SecondContent
               data-aos="zoom-out-up"
@@ -193,14 +193,14 @@ const SecondWork: React.FC = () => {
               data-aos="fade-right"
               data-aos-delay="200"
               data-aos-offset="250"
-              data-aos-duration="1800"
+              data-aos-duration="2500"
             />
           </Col>
           <Col lg={2} className="ml-40 p-0">
             <ThirdContent
               data-aos="fade-left"
               data-aos-delay="1000"
-              data-aos-duration="1200"
+              data-aos-duration="2000"
             >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Latest {'&'} greatest.
@@ -217,7 +217,7 @@ const SecondWork: React.FC = () => {
             <ContentBody
               data-aos="fade-right"
               data-aos-delay="1000"
-              data-aos-duration="1200"
+              data-aos-duration="2000"
             >
               <Title lineHeight="24px" fontSize="25px" marginTop="0">
                 Latest {'&'} greatest.
@@ -233,7 +233,7 @@ const SecondWork: React.FC = () => {
               src={w205}
               data-aos="fade-left"
               data-aos-delay="200"
-              data-aos-duration="1800"
+              data-aos-duration="2500"
               data-aos-offset="300"
             />
           </Col>
