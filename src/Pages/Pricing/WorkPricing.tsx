@@ -85,6 +85,7 @@ const WorkPricing: React.FC = () => {
               className="left__content"
               data-aos="fade-right"
               data-aos-delay="500"
+              data-aos-duration="1200"
             >
               <HeadPricing>
                 <Title lineHeight="18px" fontSize="18px">
@@ -120,7 +121,12 @@ const WorkPricing: React.FC = () => {
               </BodyText>
             </Col>
             <Col md={8} lg={6} className="img__size">
-              <ImgWork src={work04} data-aos="fade-left" data-aos-delay="500" />
+              <ImgWork
+                src={work04}
+                data-aos="fade-left"
+                data-aos-delay="500"
+                data-aos-duration="1200"
+              />
             </Col>
           </Row>
         </Container>
